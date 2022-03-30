@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 public class BrowserNavigationTests extends BaseTest {
     final String url = "https://www.google.com";
-    private WebDriver _childWebDriver = getWebDriver(WebDriverType.CHROME);
+    private WebDriver _childWebDriver = webDriver;
 
     @Test
     public void testOpenBrowser() {

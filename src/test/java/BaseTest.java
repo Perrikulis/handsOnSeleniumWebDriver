@@ -16,13 +16,13 @@ public class BaseTest {
     private String _operaDriverPath = "/Users/jxr20920/Downloads/operaDriver";
     //En Windows el path debe empezar con C: y terminar el chromedriver.exe
 
-    private WebDriver webDriver = null;
+    public WebDriver webDriver = getWebDriver(WebDriverType.CHROME);
 
     private WebDriverType _webDriverType = WebDriverType.CHROME;
 
     //Fin Variables Globales
 
-    public WebDriver getWebDriver(WebDriverType webDriverType) {
+    private WebDriver getWebDriver(WebDriverType webDriverType) {
         this._webDriverType = webDriverType;
         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
 
