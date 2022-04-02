@@ -13,6 +13,7 @@ public class MyStoreHomeTests extends BaseTest {
     final String logoCSSLocatorFalse = "div.header_logo";
     final String logoCSSLocator = "div#header_logo";
     final String cartCSSLocator = "div.shopping_cart > a";
+    final String searchTextBoxCSSLocator = "div > form#searchbox";
 
     @Test
     public void testSearchFirstElement() {
@@ -74,11 +75,17 @@ public class MyStoreHomeTests extends BaseTest {
                 "Error: URL actual and expected do not match.");
     }
 
-    //Tarea para el proximo Sabado 2 de abril 2022
-    //Test para localizar la caja de busqueda de My Store testSearchBoxPresent()
-    //Requerimiento al entrar a My Store la caja de busqueda (Search text box) debe estar visible
-    //Leer la Guia Rapida de GitHub (Crear branch y subir al repo)
-    //Mandar usuario a Jenny por correo o por Slack
+    @Test
+    public void testSearchTextBox() {
+        //Tarea para el proximo Sabado 2 de abril 2022
+        //Test para localizar la caja de busqueda de My Store testSearchBoxPresent()
+        //Requerimiento al entrar a My Store la caja de busqueda (Search text box) debe estar visible
+        //Leer la Guia Rapida de GitHub (Crear branch y subir al repo)
+        //Mandar usuario a Jenny por correo o por Slack
+        openMyStore();
+        WebElement searchTextBox = _childWebDriver.findElement(By.cssSelector(searchTextBoxCSSLocator));
+        Assert.assertTrue(searchTextBox.isDisplayed(), "Search text box not displayed.");
+    }
 
     private void openMyStore() {
         _childWebDriver.get(urlMyStore);
