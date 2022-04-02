@@ -13,6 +13,7 @@ public class MyStoreHomeTests extends BaseTest {
     final String logoCSSLocatorFalse = "div.header_logo";
     final String logoCSSLocator = "div#header_logo";
     final String cartCSSLocator = "div.shopping_cart > a";
+    final String searchBoxPage = "searchbox";
 
     @Test
     public void testSearchFirstElement() {
@@ -79,6 +80,24 @@ public class MyStoreHomeTests extends BaseTest {
     //Requerimiento al entrar a My Store la caja de busqueda (Search text box) debe estar visible
     //Leer la Guia Rapida de GitHub (Crear branch y subir al repo)
     //Mandar usuario a Jenny por correo o por Slack
+
+    @Test
+    public void testSearchBoxPresent1() {
+
+        openMyStore();
+        WebElement serchBtn = _childWebDriver.findElement(By.id(searchBoxPage));
+
+        //Valida la pagina
+        String pageActual = _childWebDriver.getCurrentUrl();
+        Assert.assertEquals(pageActual, urlMyStore);
+
+        //Valido que el campo search este presente
+        if (serchBtn.isDisplayed()) {
+            System.out.println("El campo Search se muestra correctamente");
+        } else {
+            System.out.println("El campo Search no se muestra en la pantalla");
+        }
+    }
 
     private void openMyStore() {
         _childWebDriver.get(urlMyStore);
