@@ -14,6 +14,13 @@ public class MyStoreHomeTests extends BaseTest {
     final String logoCSSLocator = "div#header_logo";
     final String cartCSSLocator = "div.shopping_cart > a";
 
+    //final String boxCSSLocator = "form#searchbox"; FUNCIONA para localizar el elemento
+    //final String boxCSSLocator =  "div.col-sm-4 > form"; FUNCIONA para localizar el elemento
+    final String boxCSSLocator =  "div#search_block_top";
+    final String boxCSSLocatorFalse =  "div.col-sm-4 clearfix > form";
+
+
+
     @Test
     public void testSearchFirstElement() {
         openMyStore();
@@ -80,8 +87,32 @@ public class MyStoreHomeTests extends BaseTest {
     //Leer la Guia Rapida de GitHub (Crear branch y subir al repo)
     //Mandar usuario a Jenny por correo o por Slack
 
+    @Test
+    public void testSearchBoxPresent(){
+
+        openMyStore();
+        WebElement caja = _childWebDriver.findElement(By.cssSelector(boxCSSLocator));
+        System.out.println("La caja de búsqueda se está mostrando: "+ caja.isDisplayed());
+
+    }
+
+    @Test
+    public void testSearchBoxManejoDeException() {
+        openMyStore();
+        try {
+            WebElement caja = _childWebDriver.findElement(By.cssSelector(boxCSSLocatorFalse));
+            System.out.println("Codigo TRY: " + caja.isDisplayed());
+        } catch (NoSuchElementException cajaNoLocalizada) {
+            System.out.println("CATCH ( cajaNoLocalizada ) El localizador False: " + boxCSSLocatorFalse + " no funciona.");
+            WebElement caja = _childWebDriver.findElement(By.cssSelector(boxCSSLocator));
+            System.out.println("La caja de búsqueda se está mostrando: " + caja.isDisplayed());
+        }
+    }
+
+
     private void openMyStore() {
         _childWebDriver.get(urlMyStore);
         System.out.println("El navegador ha abierto la URL: " + urlMyStore);
+
     }
 }
