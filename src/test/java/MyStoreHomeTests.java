@@ -13,6 +13,8 @@ public class MyStoreHomeTests extends BaseTest {
     final String logoCSSLocatorFalse = "div.header_logo";
     final String logoCSSLocator = "div#header_logo";
     final String cartCSSLocator = "div.shopping_cart > a";
+    final String searchTextBoxIdLocator = "search_query_top";
+    final String btnSearchCSSLocator = "form#searchbox > button";
 
     @Test
     public void testSearchFirstElement() {
@@ -79,6 +81,29 @@ public class MyStoreHomeTests extends BaseTest {
     //Requerimiento al entrar a My Store la caja de busqueda (Search text box) debe estar visible
     //Leer la Guia Rapida de GitHub (Crear branch y subir al repo)
     //Mandar usuario a Jenny por correo o por Slack
+
+    @Test
+    public void testSendTextToSearchTextBox() {
+        //Variables que se van a usar en la prueba
+        String textToSearch = "women";
+
+        //Acciones o pasos de prueba
+        openMyStore();
+        //Elementos que se usaran en toda la prueba
+        WebElement searchTextBox = _childWebDriver.findElement(By.id(searchTextBoxIdLocator));
+        WebElement buttonSearch = _childWebDriver.findElement(By.cssSelector(btnSearchCSSLocator));
+
+        searchTextBox.sendKeys(textToSearch);
+        buttonSearch.click();
+
+        SearchResultsPage resultsPage = new SearchResultsPage(_childWebDriver);
+        Boolean resultsDisplayed = resultsPage.verifySearchResults();
+
+        System.out.println("Results displayed: " + resultsDisplayed);
+
+        //Verificar que se hayan abierto la pagina de resultados
+        //Tarea 02 de Abril 2022 Agregar Assert
+    }
 
     private void openMyStore() {
         _childWebDriver.get(urlMyStore);
