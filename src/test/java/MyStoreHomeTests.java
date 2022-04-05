@@ -1,3 +1,5 @@
+import Pages.SearchResultsPage;
+import Steps.SearchResultsSteps;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
@@ -6,8 +8,8 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class MyStoreHomeTests extends BaseTest {
-    final String urlMyStore = "http://automationpractice.com/index.php";
     private WebDriver _childWebDriver = webDriver;
+    SearchResultsSteps searchResultsSteps = new SearchResultsSteps(_childWebDriver);
 
     //Localizadores o Selectors
     final String logoCSSLocatorFalse = "div.header_logo";
@@ -19,14 +21,14 @@ public class MyStoreHomeTests extends BaseTest {
 
     @Test
     public void testSearchFirstElement() {
-        openMyStore();
+        searchResultsSteps.openMyStore();
         WebElement logo = _childWebDriver.findElement(By.cssSelector(logoCSSLocator));
         System.out.println(logo.isDisplayed());
     }
 
     @Test
     public void testManejoDeException() {
-        openMyStore();
+        searchResultsSteps.openMyStore();
         try {
             //Ejemplo
             WebElement logo = _childWebDriver.findElement(By.cssSelector(logoCSSLocatorFalse));
@@ -40,7 +42,7 @@ public class MyStoreHomeTests extends BaseTest {
 
     @Test
     public void testManejoDeException2() {
-        openMyStore();
+        searchResultsSteps.openMyStore();
         try {
             WebElement logo = _childWebDriver.findElement(By.cssSelector(logoCSSLocator));
             Assert.assertTrue(logo.isDisplayed(), "Mensaje de error");
@@ -52,7 +54,7 @@ public class MyStoreHomeTests extends BaseTest {
 
     @Test
     public void testManejoDeException2Fails() {
-        openMyStore();
+        searchResultsSteps.openMyStore();
         try {
             WebElement logo = _childWebDriver.findElement(By.cssSelector(logoCSSLocatorFalse));
             Assert.assertTrue(logo.isDisplayed(), "Mensaje de error");
@@ -68,7 +70,7 @@ public class MyStoreHomeTests extends BaseTest {
 
     @Test
     public void testURLCart() {
-        openMyStore();
+        searchResultsSteps.openMyStore();
         WebElement cart = _childWebDriver.findElement(By.cssSelector(cartCSSLocator));
         cart.click();
         String cartURLActual = _childWebDriver.getCurrentUrl();
@@ -84,18 +86,19 @@ public class MyStoreHomeTests extends BaseTest {
         //Requerimiento al entrar a My Store la caja de busqueda (Search text box) debe estar visible
         //Leer la Guia Rapida de GitHub (Crear branch y subir al repo)
         //Mandar usuario a Jenny por correo o por Slack
-        openMyStore();
+        searchResultsSteps.openMyStore();
         WebElement searchTextBox = _childWebDriver.findElement(By.cssSelector(searchTextBoxCSSLocator));
         Assert.assertTrue(searchTextBox.isDisplayed(), "Search text box not displayed.");
     }
 
     @Test
     public void testSendTextToSearchTextBox() {
+
         //Variables que se van a usar en la prueba
         String textToSearch = "women";
 
         //Acciones o pasos de prueba
-        openMyStore();
+        searchResultsSteps.openMyStore();
         //Elementos que se usaran en toda la prueba
         WebElement searchTextBox = _childWebDriver.findElement(By.id(searchTextBoxIdLocator));
         WebElement buttonSearch = _childWebDriver.findElement(By.cssSelector(btnSearchCSSLocator));
@@ -103,17 +106,13 @@ public class MyStoreHomeTests extends BaseTest {
         searchTextBox.sendKeys(textToSearch);
         buttonSearch.click();
 
-        SearchResultsPage resultsPage = new SearchResultsPage(_childWebDriver);
-        Boolean resultsDisplayed = resultsPage.verifySearchResults();
+
+        Boolean resultsDisplayed = searchResultsSteps.verifySearchResults();
 
         System.out.println("Results displayed: " + resultsDisplayed);
 
         //Verificar que se hayan abierto la pagina de resultados
         //Tarea 02 de Abril 2022 Agregar Assert
-    }
-
-    private void openMyStore() {
-        _childWebDriver.get(urlMyStore);
-        System.out.println("El navegador ha abierto la URL: " + urlMyStore);
+        Assert.assertTrue(resultsDisplayed, "Error: Yellow alert is not present.");
     }
 }
