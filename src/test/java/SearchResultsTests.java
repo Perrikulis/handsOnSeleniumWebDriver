@@ -19,4 +19,12 @@ public class SearchResultsTests extends BaseTest{
         //Step 5: Verify textbox is clear
         textBoxValue = _searchResultsSteps.getTextBoxValue();
     }
+
+    @Test
+    public void testMultipleSearch(){
+        //List of String to search: blouse, shrirt, dress
+        //Send String to search text box
+        //Click search button
+        //Verify text box value is as String
+    }
 }
