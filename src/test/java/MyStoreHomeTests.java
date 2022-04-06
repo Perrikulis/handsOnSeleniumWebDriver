@@ -1,3 +1,6 @@
+import Pages.SearchResultsPage;
+import Steps.BaseSteps;
+import Steps.SearchResultsSteps;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
@@ -8,7 +11,7 @@ import org.testng.annotations.Test;
 public class MyStoreHomeTests extends BaseTest{
 
     private WebDriver _childWebDriver = webDriver;
-    final String urlMyStore = "http://automationpractice.com/index.php";
+    SearchResultsSteps searchResultsSteps = new SearchResultsSteps(_childWebDriver);
 
     //Localizadores o selectores
     final String logoCSSLocator = "div#header_logo";
@@ -20,14 +23,14 @@ public class MyStoreHomeTests extends BaseTest{
 
     @Test
     public void testSearchFirstElement(){
-        openMyStore();
+        searchResultsSteps.openMyStore();
         WebElement logo = _childWebDriver.findElement(By.cssSelector(logoCSSLocator));
         System.out.println(logo.isDisplayed());
     }
 
     @Test
     public void testExceptionManagement(){
-        openMyStore();
+        searchResultsSteps.openMyStore();
         try {
             WebElement logo = _childWebDriver.findElement(By.cssSelector(logoCSSLocatorFalso));
             System.out.println("Código try: " + logo.isDisplayed());
@@ -42,7 +45,7 @@ public class MyStoreHomeTests extends BaseTest{
 
     @Test
     public void testExceptionManagement2(){
-        openMyStore();
+        searchResultsSteps.openMyStore();
         try {
             WebElement logo = _childWebDriver.findElement(By.cssSelector(logoCSSLocator));
             Assert.assertTrue(logo.isDisplayed(), "Mensaje de error");
@@ -54,7 +57,7 @@ public class MyStoreHomeTests extends BaseTest{
 
     @Test
     public void testExceptionManagement2Fails(){
-        openMyStore();
+        searchResultsSteps.openMyStore();
         try {
             WebElement logo = _childWebDriver.findElement(By.cssSelector(logoCSSLocatorFalso));
             //logo.click();
@@ -71,7 +74,7 @@ public class MyStoreHomeTests extends BaseTest{
 
     @Test
     public void testVerificaURLCarrito(){
-        openMyStore();
+        searchResultsSteps.openMyStore();
         try{
             WebElement carrito = _childWebDriver.findElement(By.cssSelector(carritoCSSLocator));
             Assert.assertTrue(carrito.isDisplayed(), "No se encontró el carrito");
@@ -96,7 +99,8 @@ public class MyStoreHomeTests extends BaseTest{
     @Test
     public void testSearchBoxPresent(){
         //Apertura de MyStore
-        openMyStore();
+        BaseSteps baseSteps = new BaseSteps(_childWebDriver);
+        baseSteps.openMyStore();
         //Búsqueda del objeto por selector
         try{
             WebElement searchTextBox = _childWebDriver.findElement(By.cssSelector(searchTextBoxCSSLocator));
@@ -113,7 +117,7 @@ public class MyStoreHomeTests extends BaseTest{
         String textToSearch = "women";
 
         //Acciones o pasos de prueba
-        openMyStore();
+        searchResultsSteps.openMyStore();
 
         //Elementos que se usarán en la prueba
         WebElement searchTextBox = _childWebDriver.findElement(By.id(searchTextBoxIdLocator));
@@ -123,8 +127,8 @@ public class MyStoreHomeTests extends BaseTest{
         buttonSearch.click();
 
         //Verificar que se hayan abierto la página de resultados
-        SearchResultsPage resultsPage = new SearchResultsPage(_childWebDriver);
-        Boolean resultsDisplayed = resultsPage.verifySearchResults();
+        SearchResultsSteps searchResultsSteps = new SearchResultsSteps(_childWebDriver);
+        Boolean resultsDisplayed = searchResultsSteps.verifySearchResults();
 
         System.out.println("Results displayed: " + resultsDisplayed);
         //Tarea 02 de abril de 2022
@@ -133,8 +137,5 @@ public class MyStoreHomeTests extends BaseTest{
 
     }
 
-    private void openMyStore(){
-        _childWebDriver.get(urlMyStore);
-        System.out.println("El navegador ha abierto la URL " + urlMyStore);
-    }
+
 }
