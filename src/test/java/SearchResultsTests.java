@@ -1,5 +1,9 @@
 import Steps.SearchResultsSteps;
+import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import java.util.Arrays;
+import java.util.List;
 
 public class SearchResultsTests extends BaseTest{
     SearchResultsSteps _searchResultsSteps = new SearchResultsSteps(webDriver);
@@ -22,9 +26,19 @@ public class SearchResultsTests extends BaseTest{
 
     @Test
     public void testMultipleSearch(){
-        //List of String to search: blouse, shrirt, dress
-        //Send String to search text box
-        //Click search button
-        //Verify text box value is as String
+        _searchResultsSteps.openMyStore();
+
+        List<String> items = Arrays.asList("blouse", "shirt", "dress");
+        for (String item: items) {
+            _searchResultsSteps.sendSearchText(item);
+            _searchResultsSteps.clickSearchButton();
+            String textBoxValue = _searchResultsSteps.getTextBoxValue();
+            Assert.assertEquals(textBoxValue, item);
+            _searchResultsSteps.clearSearchTextBox();
+        }
+
     }
+
+    //En la seccion de busqeudas vamos a obtener el primer resultado
+    //Cantidad de resultados
 }
