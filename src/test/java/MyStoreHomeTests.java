@@ -14,7 +14,9 @@ public class MyStoreHomeTests extends BaseTest{
     final String logoCSSLocator = "div#header_logo";
     final String logoCSSLocatorFalso = "div.header_logo";
     final String carritoCSSLocator = "div.shopping_cart > a";
-    final String searchTextBoxLocator = "div > form#searchbox";
+    final String searchTextBoxCSSLocator = "div > form#searchbox";
+    final String searchTextBoxIdLocator = "search_query_top";
+    final String buttonSearchCSSLocator = "form#searchbox > button";
 
     @Test
     public void testSearchFirstElement(){
@@ -97,12 +99,38 @@ public class MyStoreHomeTests extends BaseTest{
         openMyStore();
         //Búsqueda del objeto por selector
         try{
-            WebElement searchTextBox = _childWebDriver.findElement(By.cssSelector(searchTextBoxLocator));
+            WebElement searchTextBox = _childWebDriver.findElement(By.cssSelector(searchTextBoxCSSLocator));
             Assert.assertTrue(searchTextBox.isDisplayed(), "No se encontró la caja de búsqueda");
-            System.out.println("La caja de texto con localizador: " + searchTextBoxLocator + " fue encontrada");
+            System.out.println("La caja de texto con localizador: " + searchTextBoxCSSLocator + " fue encontrada");
         }catch (NoSuchElementException elementoNoLocalizado){
-            Assert.fail("El elemento no fue encontrado con el localizador: " + searchTextBoxLocator);
+            Assert.fail("El elemento no fue encontrado con el localizador: " + searchTextBoxCSSLocator);
         }
+    }
+
+    @Test
+    public void testSendTextToSearchTextBox() {
+        //Variables que se van a usar en la prueba
+        String textToSearch = "women";
+
+        //Acciones o pasos de prueba
+        openMyStore();
+
+        //Elementos que se usarán en la prueba
+        WebElement searchTextBox = _childWebDriver.findElement(By.id(searchTextBoxIdLocator));
+        WebElement buttonSearch = _childWebDriver.findElement(By.cssSelector(buttonSearchCSSLocator));
+
+        searchTextBox.sendKeys(textToSearch);
+        buttonSearch.click();
+
+        //Verificar que se hayan abierto la página de resultados
+        SearchResultsPage resultsPage = new SearchResultsPage(_childWebDriver);
+        Boolean resultsDisplayed = resultsPage.verifySearchResults();
+
+        System.out.println("Results displayed: " + resultsDisplayed);
+        //Tarea 02 de abril de 2022
+        //Agregar Assert
+        Assert.assertTrue(resultsDisplayed, "No se mostró la pagina de resultados");
+
     }
 
     private void openMyStore(){
