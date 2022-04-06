@@ -3,7 +3,9 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class SearchResultsTests extends BaseTest{
     SearchResultsSteps _searchResultsSteps = new SearchResultsSteps(webDriver);
@@ -41,4 +43,31 @@ public class SearchResultsTests extends BaseTest{
 
     //En la seccion de busqeudas vamos a obtener el primer resultado
     //Cantidad de resultados
+
+
+    @Test
+    public void testHeadingCounter() {
+        _searchResultsSteps.openMyStore();
+
+        Map<String, Integer> mapToSearch = new HashMap<>();
+        mapToSearch.put("blouse", 1);
+        mapToSearch.put("shirt", 1);
+        mapToSearch.put("dress", 7);
+        String commonTextSingular = " result has been found.";
+        String commonTexPlural = " results have been found.";
+        mapToSearch.forEach((key, value)->{
+            _searchResultsSteps.sendSearchText(key);
+            _searchResultsSteps.clickSearchButton();
+            String textBoxValue = _searchResultsSteps.getTextCounter();
+            String expectedValue = "";
+            if(value>1) {
+                expectedValue = value + commonTexPlural;
+            }else{
+                expectedValue = value + commonTextSingular;
+            }
+            Assert.assertEquals(expectedValue, textBoxValue);
+            _searchResultsSteps.clearSearchTextBox();
+        });
+
+    }
 }

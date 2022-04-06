@@ -41,4 +41,9 @@ public class SearchResultsSteps extends BaseSteps {
         WebElement searchTextBox = _searchResultsPage.getSearchTextBox();
         searchTextBox.sendKeys(text);
     }
+
+    public String getTextCounter(){
+        WebElement getHeadingCounter = _searchResultsPage.getHeadingCounter();
+        return getHeadingCounter.getText();
+    }
 }

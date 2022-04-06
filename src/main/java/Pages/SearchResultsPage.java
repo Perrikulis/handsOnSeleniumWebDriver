@@ -10,6 +10,7 @@ public class SearchResultsPage {
     final String alertSearchResultsCSSLocator = "div#center_column > .alert";
     final String searchTextBoxIdLocator = "search_query_top";
     final String btnSearchCSSLocator = "form#searchbox > button";
+    final String spanHeadingCounter = "span.heading-counter";
 
     //Constructor receives WebDriver object type
     public SearchResultsPage(WebDriver _webDriverResults) {
@@ -26,6 +27,10 @@ public class SearchResultsPage {
     public WebElement getSearchTextBox() {
         WebElement searchTextBox = _webDriverResults.findElement(By.id(searchTextBoxIdLocator));
         return searchTextBox;
+    }
+
+    public WebElement getHeadingCounter(){
+        return _webDriverResults.findElement(By.cssSelector(spanHeadingCounter));
     }
 
     public WebElement getBtnSearch() {
