@@ -13,7 +13,6 @@ public class MyStoreHomeTests extends BaseTest {
     SearchResultsSteps searchResultsSteps = new SearchResultsSteps(_childWebDriver);
 
     MyStoreHomeSteps _myStoreHomeSteps = new MyStoreHomeSteps(_childWebDriver);
-    SearchResultsSteps _sear
 
     //Localizadores o Selectors
     final String logoCSSLocatorFalse = "div.header_logo";
