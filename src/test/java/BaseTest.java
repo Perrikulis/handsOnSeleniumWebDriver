@@ -9,7 +9,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.*;
 
 public class BaseTest {
-
+    //Esta es una prueba
     //Comienzo: Declarando variables Globales
     private String _chromeDriverPath = "/Users/jxr20920/Downloads/chromedriver";
     private String _fireFoxDriverPath = "/Users/jxr20920/Downloads/geckodriver";
