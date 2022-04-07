@@ -25,8 +25,10 @@ public class MyStoreHomePage extends BasePage {
         WebElement itemToReturn = getMenuList().get(0);
         for(WebElement item : getMenuList()) {
             String title = item.getAttribute("title");
+            System.out.println("Current item is: " + title);
             if (title.equals(menuItemName)) {
                 itemToReturn =  item;
+                System.out.println("option found: " + title);
                 break;
             }
         }

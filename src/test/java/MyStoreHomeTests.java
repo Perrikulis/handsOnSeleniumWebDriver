@@ -121,9 +121,10 @@ public class MyStoreHomeTests extends BaseTest {
     }
 
     @Test
-    public void testMenuOptionDresses() {
+    public void testMenuOption(){
         String option = "Dresses";
         _myStoreHomeSteps.openMyStore();
-        _myStoreHomeSteps.getMenuItemTitle(option);
+        String menuItemTitleActual = _myStoreHomeSteps.getMenuItemTitle(option);
+        Assert.assertEquals(menuItemTitleActual, option);
     }
 }
