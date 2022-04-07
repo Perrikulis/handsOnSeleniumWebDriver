@@ -1,4 +1,5 @@
 import Pages.SearchResultsPage;
+import Steps.MyStoreHomeSteps;
 import Steps.SearchResultsSteps;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
@@ -10,6 +11,9 @@ import org.testng.annotations.Test;
 public class MyStoreHomeTests extends BaseTest {
     private WebDriver _childWebDriver = webDriver;
     SearchResultsSteps searchResultsSteps = new SearchResultsSteps(_childWebDriver);
+
+    MyStoreHomeSteps _myStoreHomeSteps = new MyStoreHomeSteps(_childWebDriver);
+    SearchResultsSteps _sear
 
     //Localizadores o Selectors
     final String logoCSSLocatorFalse = "div.header_logo";
@@ -114,5 +118,12 @@ public class MyStoreHomeTests extends BaseTest {
         //Verificar que se hayan abierto la pagina de resultados
         //Tarea 02 de Abril 2022 Agregar Assert
         Assert.assertTrue(resultsDisplayed, "Error: Yellow alert is not present.");
+    }
+
+    @Test
+    public void testMenuOptionDresses() {
+        String option = "Dresses";
+        _myStoreHomeSteps.openMyStore();
+        _myStoreHomeSteps.getMenuItemTitle(option);
     }
 }
