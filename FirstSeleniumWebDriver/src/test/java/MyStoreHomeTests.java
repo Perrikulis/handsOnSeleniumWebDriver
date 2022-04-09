@@ -141,18 +141,20 @@ public class MyStoreHomeTests extends BaseTest {
     @Test
     public void testWOmenCategory() {
 
+        //Abrir la pagina
         _myStoreHomeSteps.openMyStore();
         WebElement womenBtn = _childWebDriver.findElement(By.cssSelector(menuListClassSelector));
         womenBtn.click();
         String categoryPageTitle = _childWebDriver.getTitle();
         String categoryPageurs = _childWebDriver.getCurrentUrl();
+        //Validar el titulo y url
         Assert.assertEquals(categoryPageTitle, "Women - My Store");
         Assert.assertEquals(categoryPageurs, "http://automationpractice.com/index.php?id_category=3&controller=category");
-
+        //Validar el banner
         WebElement bannerWomen = _childWebDriver.findElement(By.cssSelector(bannerWomenClassSelector));
         bannerWomen.isDisplayed();
         Assert.assertTrue(bannerWomen.isDisplayed(), "The Banner is not displayed.");
-
+        //Validar el texto del banner
         String bannerTxt = bannerWomen.getText();
         System.out.println(bannerTxt);
         Assert.assertEquals(bannerTxt, "Women" + "\n" +
@@ -160,7 +162,7 @@ public class MyStoreHomeTests extends BaseTest {
                 "This category includes all the basics of your wardrobe and much more:" + "\n" +
                 "shoes, accessories, printed t-shirts, feminine dresses, women's jeans!");
 
-
+       //Validar el producto mostrado
         WebElement produt = _childWebDriver.findElement(By.cssSelector(searchRestBannerClassSelector));
 
         Assert.assertTrue(produt.isDisplayed(), "The product is NOT displayed");
