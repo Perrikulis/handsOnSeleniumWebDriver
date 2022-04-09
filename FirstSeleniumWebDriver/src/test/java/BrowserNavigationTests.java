@@ -49,21 +49,22 @@ public class BrowserNavigationTests extends BaseTest {
     @Test
     public void testApplicationURL() {
         _childWevDriver.get(urlMyStore);
-        String actualtURL = _childWevDriver.getCurrentUrl();
-        System.out.println("Page current URL is: " + actualtURL);
-        Assert.assertTrue(urlMyStore.equals(actualtURL), "Expected URL and Current URL are not matching.");
-
+        String actualURL = _childWevDriver.getCurrentUrl();
+        System.out.println("Page current URL is: " + actualURL);
+        Assert.assertTrue(urlMyStore.equals(actualURL),
+                "Expected URL and Current URL are not matching.");
     }
 
     @Test
-    public void testApplicationURLNegativo() {
+    public void testApplicationURLNegative() {
         _childWevDriver.get(urlMyStore);
-        String actualtURL = _childWevDriver.getCurrentUrl();
-        System.out.println("Page current URL is: " + actualtURL);
-        Assert.assertFalse((urlMyStore.equals(actualtURL)), "Expected URL and Current URL are matching.");
-
+        String actualURL = _childWevDriver.getCurrentUrl() + "+";
+        System.out.println("Page current URL is: " + actualURL);
+        Boolean assertFalseTest = urlMyStore.equals(actualURL);
+        System.out.println(urlMyStore + " equals " + actualURL + "? :" + assertFalseTest);
+        Assert.assertFalse(urlMyStore.equals(actualURL + "?"),
+                "Testing assert false");
     }
-
 
 
 }

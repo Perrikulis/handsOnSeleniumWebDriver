@@ -1,3 +1,7 @@
+import Pages.MyStoreHomePage;
+import Pages.SearchResultsPage;
+import Steps.MyStoreHomeSteps;
+import Steps.SearchResultsSteps;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
@@ -6,91 +10,161 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class MyStoreHomeTests extends BaseTest {
-    final String urlMyStore = "http://automationpractice.com/index.php";
-    private WebDriver _childWevDriver = webDriver;
-    final String searhLogo = "div#header_logo";
-    final String searhLogoF = "div.header_logo";
-    final String carritoBtn = "div.shopping_cart > a";
-    final String urlExpected = "http://automationpractice.com/index.php?controller=order";
-    final String urlMyStore1 = "http://automationpractice.com/index.php";
-    final String searchBoxPage = "searchbox";
-    final String searchBoxPage1 = "searchbox1";
+    private WebDriver _childWebDriver = webDriver;
+    SearchResultsSteps searchResultsSteps = new SearchResultsSteps(_childWebDriver);
+    MyStoreHomeSteps _myStoreHomeSteps = new MyStoreHomeSteps(_childWebDriver);
+
+    //Localizadores o Selectors
+    final String logoCSSLocatorFalse = "div.header_logo";
+    final String logoCSSLocator = "div#header_logo";
+    final String cartCSSLocator = "div.shopping_cart > a";
+    final String searchTextBoxIdLocator = "search_query_top";
+    final String btnSearchCSSLocator = "form#searchbox > button";
+    final String searchTextBoxCSSLocator = "div > form#searchbox";
+
+    final String menuListClassSelector = "ul.sf-menu>li>a";
+    final String bannerWomenClassSelector = "div.content_scene_cat_bg";
+    final String searchRestBannerClassSelector = "div.product-container";
+
+
 
 
     @Test
     public void testSearchFirstElement() {
-        openMyStore();
-        WebElement logo = _childWevDriver.findElement(By.cssSelector(searhLogo));
+        searchResultsSteps.openMyStore();
+        WebElement logo = _childWebDriver.findElement(By.cssSelector(logoCSSLocator));
         System.out.println(logo.isDisplayed());
     }
 
     @Test
     public void testManejoDeException() {
-        openMyStore();
+        searchResultsSteps.openMyStore();
         try {
             //Ejemplo
-            WebElement logo = _childWevDriver.findElement(By.cssSelector(searhLogoF));
+            WebElement logo = _childWebDriver.findElement(By.cssSelector(logoCSSLocatorFalse));
             System.out.println("Codigo try: " + logo.isDisplayed());
-        } catch (NoSuchElementException noSuchElementException) {
-            System.out.println("El localizador " + searhLogoF + "no funciona.");
-            WebElement logo = _childWevDriver.findElement(By.cssSelector(searhLogo));
+        } catch (NoSuchElementException logoNoLocalizado) {
+            System.out.println("Catch logoNoLocalizado: El localizador " + logoCSSLocatorFalse + " no funciona.");
+            WebElement logo = _childWebDriver.findElement(By.cssSelector(logoCSSLocator));
             System.out.println("El logo se esta mostrando: " + logo.isDisplayed());
         }
     }
 
     @Test
     public void testManejoDeException2() {
-        openMyStore();
+        searchResultsSteps.openMyStore();
         try {
-            WebElement logo = _childWevDriver.findElement(By.cssSelector(searhLogo));
-            Assert.assertTrue(logo.isDisplayed(), "Mesaje de error ");
-            System.out.println("Elemento no fue localizdo usando: " + searhLogo);
+            WebElement logo = _childWebDriver.findElement(By.cssSelector(logoCSSLocator));
+            Assert.assertTrue(logo.isDisplayed(), "Mensaje de error");
+            System.out.println("El elemento fue localizado usando: " + logoCSSLocator);
         } catch (NoSuchElementException elementoNoLocalizado) {
-            Assert.fail("El elemento no fue encontrado con el localizador: " + searhLogoF);
+            Assert.fail("El elemento no fue encontrado con el localizador: " + logoCSSLocatorFalse);
         }
     }
 
-    //1.Abrir my Strore
-    //2.Click en carrito
-    //3.Verificar que la URL que se abre es  http://automationpractice.com/index.php?controller=order
-
-
     @Test
-    public void testURLCorrecta() {
-        openMyStore();
-        WebElement carrito = _childWevDriver.findElement(By.cssSelector(carritoBtn));
-        carrito.click();
-        String pageActual1 = _childWevDriver.getCurrentUrl();
-        Assert.assertEquals(pageActual1, urlExpected);
-        System.out.println("The URL corresta es " + urlExpected);
-    }
-
-    //Test para localizar la caja de busqueda de My Store testSearchBoxPresent()
-    //Requerimiento al entrar a My Store la caja de busqueda (Search text box) debe estar visible
-    //Leer la Guia Rapida de GitHub (Crear branch y subir al repo)
-    //Mandar usuario a Jenny por correo o por Slack
-
-    @Test
-    public void testSearchBoxPresent() {
-
-        openMyStore();
-        WebElement serchBtn = _childWevDriver.findElement(By.id(searchBoxPage));
-
-
-        //Valida la pagina
-        String pageActual1 = _childWevDriver.getCurrentUrl();
-        Assert.assertEquals(pageActual1, urlMyStore1);
-
-        //Valido que el campo search este presente
-        if (serchBtn.isDisplayed()) {
-            System.out.println("El campo Search se muestra correctamente");
-        } else {
-            System.out.println("El campo Search no se muestra en la pantalla");
+    public void testManejoDeException2Fails() {
+        searchResultsSteps.openMyStore();
+        try {
+            WebElement logo = _childWebDriver.findElement(By.cssSelector(logoCSSLocatorFalse));
+            Assert.assertTrue(logo.isDisplayed(), "Mensaje de error");
+            System.out.println("El elemento fue localizado usando: " + logoCSSLocatorFalse);
+        } catch (NoSuchElementException elementoNoLocalizado) {
+            Assert.fail("El elemento no fue encontrado con el localizador: " + logoCSSLocatorFalse);
         }
     }
 
-    private void openMyStore() {
-        _childWevDriver.get(urlMyStore);
-        System.out.println("El navegator ha abierto la URL: " + urlMyStore);
+    //1. Abrir My Store
+    //2. Click en Carrito
+    //3. Verificar que la URL que se abre es: http://automationpractice.com/index.php?controller=order
+
+    @Test
+    public void testURLCart() {
+        searchResultsSteps.openMyStore();
+        WebElement cart = _childWebDriver.findElement(By.cssSelector(cartCSSLocator));
+        cart.click();
+        String cartURLActual = _childWebDriver.getCurrentUrl();
+        String cartURLExpected = "http://automationpractice.com/index.php?controller=order";
+        Assert.assertEquals(cartURLActual, cartURLExpected,
+                "Error: URL actual and expected do not match.");
+    }
+
+    @Test
+    public void testSearchTextBox() {
+        //Tarea para el proximo Sabado 2 de abril 2022
+        //Test para localizar la caja de busqueda de My Store testSearchBoxPresent()
+        //Requerimiento al entrar a My Store la caja de busqueda (Search text box) debe estar visible
+        //Leer la Guia Rapida de GitHub (Crear branch y subir al repo)
+        //Mandar usuario a Jenny por correo o por Slack
+        searchResultsSteps.openMyStore();
+        WebElement searchTextBox = _childWebDriver.findElement(By.cssSelector(searchTextBoxCSSLocator));
+        Assert.assertTrue(searchTextBox.isDisplayed(), "Search text box not displayed.");
+    }
+
+    @Test
+    public void testSendTextToSearchTextBox() {
+
+        //Variables que se van a usar en la prueba
+        String textToSearch = "women";
+
+        //Acciones o pasos de prueba
+        searchResultsSteps.openMyStore();
+        //Elementos que se usaran en toda la prueba
+        WebElement searchTextBox = _childWebDriver.findElement(By.id(searchTextBoxIdLocator));
+        WebElement buttonSearch = _childWebDriver.findElement(By.cssSelector(btnSearchCSSLocator));
+
+        searchTextBox.sendKeys(textToSearch);
+        buttonSearch.click();
+
+
+        Boolean resultsDisplayed = searchResultsSteps.verifySearchResults();
+
+        System.out.println("Results displayed: " + resultsDisplayed);
+
+        //Verificar que se hayan abierto la pagina de resultados
+        //Tarea 02 de Abril 2022 Agregar Assert
+        Assert.assertTrue(resultsDisplayed, "Error: Yellow alert is not present.");
+    }
+
+    @Test
+    public void testMenuOption() {
+        String option = "Dresses";
+
+        _myStoreHomeSteps.openMyStore();
+        String menuItemTileAct = _myStoreHomeSteps.getMenuItemTitle(option);
+
+        //Agregar assert
+        Assert.assertEquals(menuItemTileAct, option);
+
+    }
+
+    @Test
+    public void testWOmenCategory() {
+
+        _myStoreHomeSteps.openMyStore();
+        WebElement womenBtn = _childWebDriver.findElement(By.cssSelector(menuListClassSelector));
+        womenBtn.click();
+        String categoryPageTitle = _childWebDriver.getTitle();
+        String categoryPageurs = _childWebDriver.getCurrentUrl();
+        Assert.assertEquals(categoryPageTitle, "Women - My Store");
+        Assert.assertEquals(categoryPageurs, "http://automationpractice.com/index.php?id_category=3&controller=category");
+
+        WebElement bannerWomen = _childWebDriver.findElement(By.cssSelector(bannerWomenClassSelector));
+        bannerWomen.isDisplayed();
+        Assert.assertTrue(bannerWomen.isDisplayed(), "The Banner is not displayed.");
+
+        String bannerTxt = bannerWomen.getText();
+        System.out.println(bannerTxt);
+        Assert.assertEquals(bannerTxt, "Women" + "\n" +
+                "You will find here all woman fashion collections." + "\n" +
+                "This category includes all the basics of your wardrobe and much more:" + "\n" +
+                "shoes, accessories, printed t-shirts, feminine dresses, women's jeans!");
+
+
+        WebElement produt = _childWebDriver.findElement(By.cssSelector(searchRestBannerClassSelector));
+
+        Assert.assertTrue(produt.isDisplayed(), "The product is NOT displayed");
+
+
     }
 }
