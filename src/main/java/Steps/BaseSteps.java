@@ -16,4 +16,8 @@ public class BaseSteps {
         _webDriver.get(urlMyStore);
         System.out.println("El navegador ha abierto la URL: " + urlMyStore);
     }
+
+    public String getURLActual(){
+        return _webDriver.getCurrentUrl();
+    }
 }
