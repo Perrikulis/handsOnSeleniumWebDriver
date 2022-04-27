@@ -14,6 +14,8 @@ public class MyStoreHomeTests extends BaseTest {
     final String logoCSSLocator = "div#header_logo";
     final String cartCSSLocator = "div.shopping_cart > a";
     final String textBoxCSSLocator = "input[id=search_query_top]"; //div > form#searchbox
+    final String searchTextBoxIdLocator = "search_query_top";
+    final String btnSearchCSSLocator = "form#searchbox > button";
 
     @Test
     public void testSearchFirstElement() {
@@ -94,9 +96,41 @@ public class MyStoreHomeTests extends BaseTest {
         }
     }
 
+    /*Solución 2
+      openMyStore();
+        WebElement searchTextBox = _childWebDriver.findElement(By.cssSelector(searchTextBoxCSSLocator));
+        Assert.assertTrue(searchTextBox.isDisplayed(), "Search text box not displayed.");
+    }
+     */
+
+    @Test
+    public void testSendTextToSearchTextBox() {
+        //Variables que se van a usar en la prueba
+        String textToSearch = "women";
+
+        //Acciones o pasos de prueba
+        openMyStore();
+        //Elementos que se usaran en toda la prueba
+        WebElement searchTextBox = _childWebDriver.findElement(By.id(searchTextBoxIdLocator));
+        WebElement buttonSearch = _childWebDriver.findElement(By.cssSelector(btnSearchCSSLocator));
+
+        searchTextBox.sendKeys(textToSearch);
+        buttonSearch.click();
+
+        SearchResultsPage resultsPage = new SearchResultsPage(_childWebDriver);
+        Boolean resultsDisplayed = resultsPage.verifySearchResults();
+
+        System.out.println("Results displayed: " + resultsDisplayed);
+
+        //Verificar que se hayan abierto la pagina de resultados
+        //Tarea 02 de Abril 2022 Agregar Assert
+        Assert.assertTrue(resultsDisplayed, "No se mostró la pagina de resultados");
+    }
 
     private void openMyStore() {
         _childWebDriver.get(urlMyStore);
         System.out.println("El navegador ha abierto la URL: " + urlMyStore);
     }
+
+
 }

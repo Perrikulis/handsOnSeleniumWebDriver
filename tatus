@@ -63,7 +63,7 @@ Date:   Sat Apr 2 13:02:17 2022 -0600
     New Page Object SearchResults for Search results view
     
     New Page Object SearchResults for Search results view
-    Added SearchResultsPage.java
+    Added MyStoreHomeTests.SearchResultsPage.java
 
 [33mcommit b844d9702baa953082a27155d515a04a39daf304[m
 Merge: 5b45926 0db7152
