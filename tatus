@@ -1,0 +1,157 @@
+[33mcommit c6c622c7fc2d8628ce03f58ce3d741e6562640a9[m[33m ([m[1;36mHEAD -> [m[1;32mCynthia[m[33m, [m[1;31morigin/Cynthia[m[33m)[m
+Author: CynRomero <67176179+CynRomero@users.noreply.github.com>
+Date:   Thu Apr 7 18:15:29 2022 -0500
+
+    Esta es una prueba de Cynthia
+
+[33mcommit c26f83e31412822f35ede575fd4f5dd699340661[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m)[m
+Author: Jennifer Ramirez <jxr20920@dexcom.com>
+Date:   Wed Apr 6 21:34:25 2022 -0500
+
+    Fixed missing line
+
+[33mcommit 4deace0cc9d380efb8c23949ec2c05d610b0b6db[m
+Merge: cf25aab d618707
+Author: Jeniffer Ramirez <73140202+JennyRamirez-Dexcom@users.noreply.github.com>
+Date:   Wed Apr 6 21:31:33 2022 -0500
+
+    Merge pull request #3 from Perrikulis/feature/06Abr_Heriberto
+    
+    Ejercicios de MyStoreHomePage faltante assert
+
+[33mcommit d6187073e7e2045a3770e7020a7921129cd8d4dc[m
+Author: Heriberto Fabian Santiago <fabiansantiago87@gmail.com>
+Date:   Wed Apr 6 21:27:08 2022 -0500
+
+    Correccion de conflictos
+    
+    se corrigen los conflictos
+
+[33mcommit cf25aab90f0f12bedc4783682f42bc7d4bad7158[m
+Author: Jennifer Ramirez <jxr20920@dexcom.com>
+Date:   Wed Apr 6 21:03:22 2022 -0500
+
+    Ejercicios de MyStoreHome Page, Tests y Steps 06 abril 2022
+    
+    Ejercicios de MyStoreHome Page, Tests y Steps 06 abril 2022
+
+[33mcommit dd84e20caba3100e68270043ea9fa901496223cb[m
+Author: Jennifer Ramirez <jxr20920@dexcom.com>
+Date:   Mon Apr 4 21:40:43 2022 -0500
+
+    Ejercicios y tarea del 4 de abril 2022 refactorizacion de codigo
+
+[33mcommit bb62ff31955cc7dd86dd28c38947566d6201ae15[m
+Author: Jennifer Ramirez <jxr20920@dexcom.com>
+Date:   Mon Apr 4 20:44:29 2022 -0500
+
+    Project structure for Test Frameworks 4 abril 2022
+    
+    Project structure for Test Frameworks
+
+[33mcommit f532a59842c40e445f416a4abd26161a3b34b949[m
+Merge: f17bac8 b844d97
+Author: Jennifer Ramirez <jxr20920@dexcom.com>
+Date:   Sat Apr 2 13:04:10 2022 -0600
+
+    Merge branch 'master' of github.com:Perrikulis/handsOnSeleniumWebDriver
+
+[33mcommit f17bac85d2089bc72a41c53a3a8829cb3b5df0c5[m
+Author: Jennifer Ramirez <jxr20920@dexcom.com>
+Date:   Sat Apr 2 13:02:17 2022 -0600
+
+    New Page Object SearchResults for Search results view
+    
+    New Page Object SearchResults for Search results view
+    Added SearchResultsPage.java
+
+[33mcommit b844d9702baa953082a27155d515a04a39daf304[m
+Merge: 5b45926 0db7152
+Author: Jeniffer Ramirez <73140202+JennyRamirez-Dexcom@users.noreply.github.com>
+Date:   Sat Apr 2 12:54:17 2022 -0600
+
+    Merge pull request #1 from Perrikulis/feature/Jeniffer_Ramirez-30_Marzo_2022
+    
+    Tarea 30 de marzo 2022
+
+[33mcommit 5b459264d185889be0163e7623cfe2374fdab194[m
+Author: Jennifer Ramirez <jxr20920@dexcom.com>
+Date:   Sat Apr 2 11:21:50 2022 -0600
+
+    Removed buildspec yml
+
+[33mcommit a1099789b6fd8902f9b64c51aceeb17b405f6c80[m
+Author: Jeniffer Ramirez <73140202+JennyRamirez-Dexcom@users.noreply.github.com>
+Date:   Sat Apr 2 11:21:03 2022 -0600
+
+    Created QAminds workflow
+    
+    Created QAminds workflow
+
+[33mcommit 01918d6506b940621466d0f7543c4dd2322e1670[m
+Author: Jennifer Ramirez <jxr20920@dexcom.com>
+Date:   Sat Apr 2 11:17:32 2022 -0600
+
+    Workflows folder and yml file added
+
+[33mcommit 0db7152d7e8c35a77557c38465f198ae0fa7e396[m[33m ([m[1;31morigin/feature/Jeniffer_Ramirez-30_Marzo_2022[m[33m)[m
+Author: Jennifer Ramirez <jxr20920@dexcom.com>
+Date:   Sat Apr 2 11:03:50 2022 -0600
+
+    Updates to gitignore
+    
+    added target folder
+
+[33mcommit d69e478a5bf6e1d9f014a623ace02a707d08d97a[m
+Author: Jennifer Ramirez <jxr20920@dexcom.com>
+Date:   Sat Apr 2 09:42:50 2022 -0600
+
+    Added test testSearchTextBox tarea 30 de marzo 2022
+    
+    Added test testSearchTextBox tarea 30 de marzo 2022
+    Browser probado en Chrome
+    MyStoreHomeTests.java
+
+[33mcommit 8e71c6ca3a106625300ee4b174a064c1608782d9[m
+Author: Jeniffer Ramirez <73140202+JennyRamirez-Dexcom@users.noreply.github.com>
+Date:   Fri Apr 1 13:35:50 2022 -0600
+
+    Update .gitignore
+
+[33mcommit 6de2641fd0a5417b0c1fd32049e1c19c19023218[m
+Author: Jeniffer Ramirez <73140202+JennyRamirez-Dexcom@users.noreply.github.com>
+Date:   Fri Apr 1 09:56:31 2022 -0600
+
+    Removed target since it's compiled code
+
+[33mcommit 54cefeaff20aaf1eafb9b3bffeedb189ef3a05b7[m
+Author: Jennifer Ramirez <jxr20920@dexcom.com>
+Date:   Wed Mar 30 21:32:28 2022 -0600
+
+    Ejercicios 30 de Marzo 2022
+
+[33mcommit 5d410162106da0b7968dfcb616128eb188ea235d[m
+Author: Jennifer Ramirez <jxr20920@dexcom.com>
+Date:   Wed Mar 30 20:32:56 2022 -0600
+
+    Ejercicios miercoles 30 marzo 2022
+
+[33mcommit d10b4abf150370b7d9008528d3fee9bdeb7acd1a[m
+Author: Jennifer Ramirez <jxr20920@dexcom.com>
+Date:   Tue Mar 29 19:36:29 2022 -0600
+
+    Made webDriver variable in BaseTest public
+    
+    Adding gitignore
+
+[33mcommit d0a52d72e139b9dffefc99b941c1fe9cf1dd5b8f[m
+Author: Jennifer Ramirez <jxr20920@dexcom.com>
+Date:   Tue Mar 29 18:46:10 2022 -0600
+
+    init commit
+
+[33mcommit 0fa50005504589a33da0a05b3ce5c12236611d46[m
+Author: Jennifer Ramirez <jxr20920@dexcom.com>
+Date:   Tue Mar 29 18:46:01 2022 -0600
+
+    init commit
