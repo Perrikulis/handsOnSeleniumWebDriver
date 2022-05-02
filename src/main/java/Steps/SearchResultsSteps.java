@@ -45,4 +45,32 @@ public class SearchResultsSteps extends BaseSteps {
         System.out.println("Enviando texto a search text box: " + text);
         searchTextBox.sendKeys(text);
     }
+
+    public String getTotalResults() {
+        WebElement textResults = _searchResultsPage.getTextResultsLabel();
+        String totalTextResults = textResults.getText();
+        return totalTextResults;
+    }
+
+    public void clickMenuOption(int indexOption){
+        _searchResultsPage.getMenuCategory().get(indexOption).click();
+    }
+
+    public String getTextNameBanner(){
+        WebElement bannerTextObject = _searchResultsPage.getNameTextBanner();
+        String value = bannerTextObject.getText();
+        System.out.println("El texto del nombre del banner es: " + value);
+        return value;
+    }
+
+    public String getTextSearchIntoBanner(int index){
+        String textIntoBanner = _searchResultsPage.getTextFromBanner().get(index).getText();
+        return textIntoBanner;
+    }
+
+    public String getTextSearchResult(){
+        String textSearchResultWomen = _searchResultsPage.getTextNumberProducts().getText();
+        return textSearchResultWomen;
+    }
+
 }
