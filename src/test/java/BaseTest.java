@@ -11,7 +11,7 @@ import org.testng.annotations.*;
 public class BaseTest {
 
     //Comienzo: Declarando variables Globales
-    private String _chromeDriverPath = "/Users/jxr20920/Downloads/chromedriver";
+    private String _chromeDriverPath = "C:\\Users\\zapat\\Documents\\Repos\\QAML_git_2022\\chromedriver_win32_101\\chromedriver.exe";
     private String _fireFoxDriverPath = "/Users/jxr20920/Downloads/geckodriver";
     private String _operaDriverPath = "/Users/jxr20920/Downloads/operaDriver";
     //En Windows el path debe empezar con C: y terminar el chromedriver.exe
