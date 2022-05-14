@@ -7,7 +7,7 @@ public class BaseSteps {
     final String urlMyStore = "http://automationpractice.com/index.php";
 
     public BaseSteps(WebDriver webDriver) {
-        System.out.println("Constructor del BaseSteps.java");
+        //System.out.println("Constructor del BaseSteps.java");
         this._webDriver = webDriver;
     }
 
