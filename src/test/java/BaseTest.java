@@ -8,10 +8,15 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import org.testng.annotations.*;
 
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Properties;
+
 public class BaseTest {
 
     //Comienzo: Declarando variables Globales
-    private String _chromeDriverPath = "/Users/jxr20920/Downloads/chromedriver";
+    private String _chromeDriverPath = "C:\\SELENIUM\\101\\chromedriver.exe";
     private String _fireFoxDriverPath = "/Users/jxr20920/Downloads/geckodriver";
     private String _operaDriverPath = "/Users/jxr20920/Downloads/operaDriver";
     //En Windows el path debe empezar con C: y terminar el chromedriver.exe
@@ -64,4 +69,17 @@ public class BaseTest {
         webDriver.quit();
     }
 
+    public String getPropertyValue(String nameOfPropertie) throws IOException {
+        Properties demoQAProperties = new Properties();
+        InputStream propertiesFilePath = new FileInputStream("equipo1.properties");
+        demoQAProperties.load(propertiesFilePath);
+        String value = demoQAProperties.getProperty(nameOfPropertie);
+        propertiesFilePath.close();
+        return value;
+    }
+
+    @AfterSuite(alwaysRun = true)
+    public void afterSuite() {
+        webDriver.quit();
+    }
 }
