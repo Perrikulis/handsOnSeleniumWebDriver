@@ -47,19 +47,19 @@ public class BaseTest {
                 break;
         } // Ends SWITCH
 
-        System.out.println("El WebDriver tipo " + webDriverType + " se ha inicializado con exito.");
+        //System.out.println("El WebDriver tipo " + webDriverType + " se ha inicializado con exito.");
         return webDriver;
     }
 
     //Annotations
     @BeforeTest
     public void beforeTest() {
-        System.out.println("Before test en Clase BaseTest.java");
+        //System.out.println("Before test en Clase BaseTest.java");
     }
 
     @AfterTest
     public void afterTest() {
-        System.out.println("After test en Clase BaseTest.java");
+        //System.out.println("After test en Clase BaseTest.java");
         //Muere WebDriver
         webDriver.quit();
     }

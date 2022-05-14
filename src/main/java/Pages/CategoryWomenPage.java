@@ -1,10 +1,11 @@
 package Pages;
 
+import Steps.BaseSteps;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class CategoryWomenPage {
+public class CategoryWomenPage extends BasePage {
     WebDriver _webDriverWomen;
     final String bannerWomenCSSLocator = "#center_column > div.content_scene_cat > div";
     final String textWomenCSSLocator = "#center_column > div.content_scene_cat > div > div > div > p:nth-child(2)";

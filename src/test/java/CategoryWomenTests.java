@@ -14,10 +14,11 @@ public class CategoryWomenTests extends BaseTest{
         //Step 2: Click in Women Menu
         _categoryWomenSteps.clickWomenMenu();
         //Step 3: Validate Women category URL
-        String womenURLActual = webDriver.getCurrentUrl();
+        Assert.assertTrue(_categoryWomenSteps.verifyURLCategoryWomen());
+        /*String womenURLActual = webDriver.getCurrentUrl();
         String womenURLExpected = "http://automationpractice.com/index.php?id_category=3&controller=category";
         Assert.assertEquals(womenURLActual, womenURLExpected,
-                "Error: URL actual and expected do not match.");
+                "Error: URL actual and expected do not match.");*/
         //Step 4: Validate Women Banner
         Assert.assertTrue(_categoryWomenSteps.verifyWomenBanner());
         //Step 5: Validate Women Text
