@@ -9,9 +9,19 @@ import java.util.List;
 public class MyStoreHomePage extends BasePage {
     WebDriver webDriverMyStoreHome;
     private final String menuListClassSelector = "ul.sf-menu>li>a";
+    private final String WomenMenuCSSelector = "#block_top_menu > ul > li:nth-child(1) > a";
+
 
     public MyStoreHomePage(WebDriver _webDriverMyStoreHome) {
         this.webDriverMyStoreHome = _webDriverMyStoreHome;
+
+
+    }
+
+    public WebElement getWomenMenu()
+    {
+        WebElement womenMenu = webDriverMyStoreHome.findElement(By.cssSelector(WomenMenuCSSelector));
+        return womenMenu;
     }
 
     //Este metodo se manda a llamar desde MyStoreHomeSteps

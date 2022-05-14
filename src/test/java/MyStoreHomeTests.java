@@ -14,6 +14,9 @@ public class MyStoreHomeTests extends BaseTest {
 
     MyStoreHomeSteps _myStoreHomeSteps = new MyStoreHomeSteps(_childWebDriver);
 
+    private final String WomenMenuCSSelector = "#block_top_menu > ul > li:nth-child(1) > a";
+
+
     //Localizadores o Selectors
     final String logoCSSLocatorFalse = "div.header_logo";
     final String logoCSSLocator = "div#header_logo";
