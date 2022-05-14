@@ -21,6 +21,13 @@ public class CategoryWomenSteps extends BaseSteps {
         womenMenu.click();
     }
 
+    /*public void verifyURLCategoryWomen(){
+        String womenURLActual = _webDriver.getCurrentUrl();
+        String womenURLExpected = "http://automationpractice.com/index.php?id_category=3&controller=category";
+
+        return ;
+    }*/
+
     public Boolean verifyWomenBanner() {
         System.out.println("Metodo verifyWomenBanner en CategoryWomenSteps.java");
         WebElement womenBannerWebElement = _categoryWomenPage.getBannerWomenWebElement();

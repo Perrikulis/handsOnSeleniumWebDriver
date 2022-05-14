@@ -17,6 +17,10 @@ public class CategoryWomenPage {
         this._webDriverWomen = _webDriverWomen;
     }
 
+   // public getURLWomenCategory(){
+   //     WebElement categoryWomen = _webDriverWomen.findElement()
+   // }
+
     public WebElement getBannerWomenWebElement() {
         System.out.println("Metodo getBannerWomenWebElement en CategoryWomenPage.java");
         WebElement bannerWomen = _webDriverWomen.findElement(By.cssSelector(bannerWomenCSSLocator));
