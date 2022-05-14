@@ -25,7 +25,7 @@ public class MyStoreHomePage extends BasePage {
     //Este es el metodo se manda a llamar des myStoreHomeSteps
     public WebElement getMenuItem(String menuITemName) {
         WebElement itemToReturn = getMenuList().get(0);
-        for (WebElement item : getMenuList()) {
+            for (WebElement item : getMenuList()) {
             String title = item.getAttribute("title");
             System.out.println("current item is: " + title);
             if (title.equals(menuITemName)) {

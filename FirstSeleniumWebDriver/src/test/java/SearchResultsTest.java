@@ -47,6 +47,5 @@ public class SearchResultsTest extends BaseTest {
         }
     }
 
-    //Tarea 04 abril 2022
-    //Obtener total de resultados (WebElement)
+
 }
