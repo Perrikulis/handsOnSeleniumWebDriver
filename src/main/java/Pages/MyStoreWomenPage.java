@@ -24,6 +24,9 @@ public class MyStoreWomenPage extends BasePage {
     @FindBy(how = How.CSS, using = ".page-heading.product-listing .heading-counter")
     private WebElement paragraphHeadingCounter;
 
+    @FindBy(how = How.CSS, using = "#block_top_menu ul li a[title='Women']")
+    private WebElement womenCategoryElement;
+
     public WebElement getBannerWomenCategory(){
         return banner;
     }
@@ -34,5 +37,9 @@ public class MyStoreWomenPage extends BasePage {
 
     public WebElement getParagraphHeadingCounter(){
         return paragraphHeadingCounter;
+    }
+
+    public WebElement getWomenCategoryElement(){
+        return womenCategoryElement;
     }
 }
