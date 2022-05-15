@@ -15,11 +15,9 @@ public class MyStoreTshirtsSteps  extends BaseSteps{
     }
     MyStoreTshirtsPage tshirtsPage= PageFactory.initElements (_webDriver,MyStoreTshirtsPage.class);
 
-    private final String tshirtsCategorySelector = "(//a[contains(text(),'T-shirts')])[2]";
-
 
     public void openTshirtsCategory (){
-        WebElement womenCatBtn = _webDriver.findElement(By.xpath(tshirtsCategorySelector));
+        WebElement womenCatBtn = tshirtsPage.getiItemsounter ();
         womenCatBtn.click();
     }
 

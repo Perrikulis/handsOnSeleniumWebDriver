@@ -22,6 +22,11 @@ public class MyStoreTshirtsPage extends BasePage {
     @FindBy(how = How.CSS, using = ".page-heading.product-listing .heading-counter")
     private WebElement paragraphHeadingCounter;
 
+    @FindBy(how = How.XPATH, using= "(//a[contains(text(),'T-shirts')])[2]")
+    private WebElement tshirtsCategoryXpath;
+
+
+
     public WebElement getBannerTshirtsCategory(){
         return banner;
     }
@@ -33,4 +38,10 @@ public class MyStoreTshirtsPage extends BasePage {
     public WebElement getParagraphHeadingCounter(){
         return paragraphHeadingCounter;
     }
+
+    public WebElement getiItemsounter(){
+        return tshirtsCategoryXpath;
+    }
+
+
 }
