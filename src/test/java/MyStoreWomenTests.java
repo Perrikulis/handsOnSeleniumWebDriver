@@ -1,20 +1,14 @@
 import Steps.MyStoreWomenSteps;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.*;
 
 import java.io.IOException;
-import java.util.List;
 
 public class MyStoreWomenTests extends BaseTest{
     private WebDriver _childWebDriver = webDriver;
     MyStoreWomenSteps womenSteps = new MyStoreWomenSteps(_childWebDriver);
-
-    private final String womenCategorySelector = "#block_top_menu ul li a[title='Women']";
-
 
 
     @BeforeTest(groups = {"WomenCategoryTest"})

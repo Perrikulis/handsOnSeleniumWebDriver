@@ -11,15 +11,13 @@ import java.util.List;
 public class MyStoreWomenSteps extends BaseSteps{
 
     MyStoreWomenPage womenPage = PageFactory.initElements(_webDriver, MyStoreWomenPage.class);
-    private final String womenCategorySelector = "#block_top_menu ul li a[title='Women']";
 
     public MyStoreWomenSteps(WebDriver webDriver) {
         super(webDriver);
     }
 
     public void openWomenCategory(){
-        WebElement womenCatBtn = _webDriver.findElement(By.cssSelector(womenCategorySelector));
-        womenCatBtn.click();
+        womenPage.getWomenCategoryElement().click();
     }
 
     public boolean verifyBannerDisplayed(){
