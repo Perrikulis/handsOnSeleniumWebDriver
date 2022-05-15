@@ -1,6 +1,6 @@
 package Steps;
 
-import Pages.MyStoreTShirtsTests;
+import Pages.MyStoreWomenPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,7 +10,7 @@ import java.util.List;
 
 public class MyStoreWomenSteps extends BaseSteps{
 
-    MyStoreTShirtsTests womenPage = PageFactory.initElements(_webDriver, MyStoreTShirtsTests.class);
+    MyStoreWomenPage womenPage = PageFactory.initElements(_webDriver, MyStoreWomenPage.class);
     private final String womenCategorySelector = "#block_top_menu ul li a[title='Women']";
 
     public MyStoreWomenSteps(WebDriver webDriver) {
