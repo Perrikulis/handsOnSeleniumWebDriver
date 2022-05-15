@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Final Project" duration-ms="6352" started-at="2022-05-15T02:42:42 CDT" finished-at="2022-05-15T02:42:48 CDT">
+    <groups>
+    </groups>
+    <test name="/Users/jcanalesp/Documents/GitHub/handsOnSeleniumWebDriver" duration-ms="6352" started-at="2022-05-15T02:42:42 CDT" finished-at="2022-05-15T02:42:48 CDT">
+      <class name="CategoryWomenTests">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:CategoryWomenTests@1de76cc7]" name="beforeTest" is-config="true" duration-ms="16" started-at="2022-05-15T02:42:42 CDT" finished-at="2022-05-15T02:42:42 CDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="testSR1010()[pri:0, instance:CategoryWomenTests@1de76cc7]" name="testSR1010" duration-ms="6195" started-at="2022-05-15T02:42:42 CDT" description="Tests para probar la categoria WOMEN del proyecto final" finished-at="2022-05-15T02:42:48 CDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSR1010 -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:CategoryWomenTests@1de76cc7]" name="afterTest" is-config="true" duration-ms="108" started-at="2022-05-15T02:42:48 CDT" finished-at="2022-05-15T02:42:48 CDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- CategoryWomenTests -->
+    </test> <!-- /Users/jcanalesp/Documents/GitHub/handsOnSeleniumWebDriver -->
+  </suite> <!-- Final Project -->
+</testng-results>

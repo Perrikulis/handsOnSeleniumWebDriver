@@ -3,3 +3,4 @@
 /target/*
 .idea/uiDesigner.xml
 .idea/misc.xml
+src/test/java/BaseTest.java
