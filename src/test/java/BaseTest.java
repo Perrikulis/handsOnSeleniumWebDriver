@@ -6,17 +6,19 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
+import org.testng.Reporter;
 import org.testng.annotations.*;
 
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
+import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
 
     //Comienzo: Declarando variables Globales
-    private String _chromeDriverPath = "C:\\SELENIUM\\101\\chromedriver.exe";
+    private String _chromeDriverPath = "C:\\DChrome\\chromedriver.exe";
     private String _fireFoxDriverPath = "/Users/jxr20920/Downloads/geckodriver";
     private String _operaDriverPath = "/Users/jxr20920/Downloads/operaDriver";
     //En Windows el path debe empezar con C: y terminar el chromedriver.exe
@@ -69,11 +71,11 @@ public class BaseTest {
         webDriver.quit();
     }
 
-    public String getPropertyValue(String nameOfPropertie) throws IOException {
+    public String getPropertyValue(String nameOfProperty) throws IOException {
         Properties demoQAProperties = new Properties();
         InputStream propertiesFilePath = new FileInputStream("equipo1.properties");
         demoQAProperties.load(propertiesFilePath);
-        String value = demoQAProperties.getProperty(nameOfPropertie);
+        String value = demoQAProperties.getProperty(nameOfProperty);
         propertiesFilePath.close();
         return value;
     }
@@ -81,5 +83,13 @@ public class BaseTest {
     @AfterSuite(alwaysRun = true)
     public void afterSuite() {
         webDriver.quit();
+    }
+
+    @BeforeTest(groups = {"DressesCategoryTest"})
+    public void setUp() throws IOException {
+        webDriver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+        webDriver.get(getPropertyValue("HOME_MY_STORE_URL"));
+        webDriver.manage().window().maximize();
+        Reporter.log("Actual URL: " + webDriver.getCurrentUrl());
     }
 }

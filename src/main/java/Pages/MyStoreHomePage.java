@@ -1,14 +1,20 @@
 package Pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
 
 import java.util.List;
 
 public class MyStoreHomePage extends BasePage {
     WebDriver webDriverMyStoreHome;
-    private final String menuListClassSelector = "ul.sf-menu>li>a";
+
+    @FindBy(how = How.CSS, using = "ul.sf-menu>li>a")
+    private List<WebElement> menuList;
+
+    @FindBy(how = How.XPATH, using = "//ul[contains(@class,\"sf-menu clearfix menu-content sf-js-enabled sf-arrows\")]/li/a[contains(text(),\"Dresses\") and contains(@class,\"sf-with-ul\")]")
+    private WebElement dressesMenuElement;
 
     public MyStoreHomePage(WebDriver _webDriverMyStoreHome) {
         this.webDriverMyStoreHome = _webDriverMyStoreHome;
@@ -16,8 +22,11 @@ public class MyStoreHomePage extends BasePage {
 
     //Este metodo se manda a llamar desde MyStoreHomeSteps
     public List<WebElement> getMenuList() {
-        List<WebElement> listaMenu = webDriverMyStoreHome.findElements(By.cssSelector(menuListClassSelector));
-        return listaMenu;
+        return menuList;
+    }
+
+    public WebElement getDressesMenuElement(){
+        return dressesMenuElement;
     }
 
     //Este metodo se manda a llamar desde MyStoreHomeSteps
