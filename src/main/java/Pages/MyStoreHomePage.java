@@ -10,8 +10,7 @@ public class MyStoreHomePage extends BasePage {
     WebDriver webDriverMyStoreHome;
     private final String menuListClassSelector = "ul.sf-menu>li>a";
     private final String WomenMenuCSSelector = "#block_top_menu > ul > li:nth-child(1) > a";
-    private final String DressesMenuxPathSelector = "//a[contains(text(),'Dresses')])[5]";
-
+    private final String DressesMenuxPathSelector =  "(//a[contains(text(),'Dresses')])[5]";
     public MyStoreHomePage(WebDriver _webDriverMyStoreHome) {
         this.webDriverMyStoreHome = _webDriverMyStoreHome;
     }

@@ -8,10 +8,12 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import org.testng.annotations.*;
 
+import java.util.concurrent.TimeUnit;
+
 public class BaseTest {
 
     //Comienzo: Declarando variables Globales
-    private String _chromeDriverPath = "C:\\Users\\zapat\\Documents\\Repos\\QAML_git_2022\\chromedriver_win32_101\\chromedriver.exe";
+    private String _chromeDriverPath = "C:\\Users\\Betzabe\\Documents\\CursoSelenium\\Chrome101\\chromedriver_win32\\chromedriver.exe";
     private String _fireFoxDriverPath = "/Users/jxr20920/Downloads/geckodriver";
     private String _operaDriverPath = "/Users/jxr20920/Downloads/operaDriver";
     //En Windows el path debe empezar con C: y terminar el chromedriver.exe
@@ -55,6 +57,8 @@ public class BaseTest {
     @BeforeTest
     public void beforeTest() {
         //System.out.println("Before test en Clase BaseTest.java");
+        webDriver.manage().window().maximize();
+        webDriver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
     }
 
     @AfterTest
