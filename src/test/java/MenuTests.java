@@ -96,21 +96,29 @@ public class MenuTests extends BaseTest{
         String cartURLActual = womenSteps.getURLActual();
         Assert.assertEquals(cartURLActual, getPropertyValue("WOMEN_CATEGORY_URL"),
                 "Error: URL actual and expected do not match.");
+        Reporter.log("Actual URL: " + cartURLActual + "<br>");
+        Reporter.log("Expected URL: " + getPropertyValue("WOMEN_CATEGORY_URL") + "<br>");
 
         boolean result = womenSteps.verifyBannerDisplayed();
         System.out.println("BannerDisplayed: " + result);
-        Reporter.log("BannerDisplayed: " + result);
+        Reporter.log("BannerDisplayed: " + result+ "<br>");
         Assert.assertTrue(result);
 
-        String first_P_actual = womenSteps.getParagraphBanner(0);
-        String second_P_actual = womenSteps.getParagraphBanner(1);
-        String third_P_actual = womenSteps.getParagraphBanner(2);
 
-        Assert.assertEquals(first_P_actual, getPropertyValue("FIRST_PARAGRAPH_BANNER"));
+        String second_P_actual = womenSteps.getParagraphBanner(1);
+        Reporter.log("Second paragraph actual: " + second_P_actual + "<br>");
+        Reporter.log("Second paragraph expected: " + getPropertyValue("SECOND_PARAGRAPH_BANNER") + "<br>");
+
+        String third_P_actual = womenSteps.getParagraphBanner(2);
+        Reporter.log("Third paragraph actual: " + third_P_actual + "<br>");
+        Reporter.log("Third paragraph expected: " + getPropertyValue("THIRD_PARAGRAPH_BANNER") + "<br>");
+
         Assert.assertEquals(second_P_actual, getPropertyValue("SECOND_PARAGRAPH_BANNER"));
         Assert.assertEquals(third_P_actual, getPropertyValue("THIRD_PARAGRAPH_BANNER"));
 
         String headerCounter = womenSteps.getCounterParagraph();
+        Reporter.log("Text counter actual: " + headerCounter + "<br>");
+        Reporter.log("Text counter expected: " + getPropertyValue("HEADER_COUNTER_TEXT"));
         Assert.assertEquals(headerCounter, getPropertyValue("HEADER_COUNTER_TEXT"));
     }
 }
