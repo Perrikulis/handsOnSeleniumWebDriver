@@ -21,12 +21,12 @@ public class MenuTests extends BaseTest{
     public void testDressesCategory_SR1011() throws IOException {
         myStoreHomeSteps.clickOnDressesMenuItem();
         String dressesCategoryActualUrl = myStoreDressesSteps.getActualUrl();
-        Reporter.log("Actual Url: " + dressesCategoryActualUrl + "<br>");
-        System.out.println("Actual Url: " + dressesCategoryActualUrl);
-        Reporter.log("Expected Url: " + getPropertyValue("DRESSES_MY_STORE_URL") + "<br>");
-        System.out.println("Expected Url: " + getPropertyValue("DRESSES_MY_STORE_URL"));
+        Reporter.log("Dresses Actual Url: " + dressesCategoryActualUrl + "<br>");
+        System.out.println("Dresses Actual Url: " + dressesCategoryActualUrl);
+        Reporter.log("Dresses Expected Url: " + getPropertyValue("DRESSES_MY_STORE_URL") + "<br>");
+        System.out.println("Dresses Expected Url: " + getPropertyValue("DRESSES_MY_STORE_URL"));
         Assert.assertEquals(dressesCategoryActualUrl, getPropertyValue("DRESSES_MY_STORE_URL"),
-                "Error: URL actual and expected do not match.");
+                "Error: Dresses URL actual and expected do not match.");
 
 
         boolean resultBannerDisplayed = myStoreDressesSteps.titleBannerIsDisplayed();
@@ -38,19 +38,19 @@ public class MenuTests extends BaseTest{
 
         String firstParagraphDressesActual = myStoreDressesSteps.getTextParagraphLine(0);
         String secondParagraphDressesActual = myStoreDressesSteps.getTextParagraphLine(1);
-        Reporter.log("Actual line: " + firstParagraphDressesActual + "<br>");
-        Reporter.log("Expected line: " + getPropertyValue("FIRST_PARAGRAPH_DRESSES_BANNER") + "<br>");
+        Reporter.log("Dresses Actual first line: " + firstParagraphDressesActual + "<br>");
+        Reporter.log("Dresses Expected first line: " + getPropertyValue("FIRST_PARAGRAPH_DRESSES_BANNER") + "<br>");
         Assert.assertEquals(firstParagraphDressesActual, getPropertyValue("FIRST_PARAGRAPH_DRESSES_BANNER"));
-        Reporter.log("Actual line: " + secondParagraphDressesActual + "<br>");
-        Reporter.log("Expected line: " + getPropertyValue("SECOND_PARAGRAPH_DRESSES_BANNER") + "<br>");
+        Reporter.log("Dresses Actual second line: " + secondParagraphDressesActual + "<br>");
+        Reporter.log("Dresses Expected second line: " + getPropertyValue("SECOND_PARAGRAPH_DRESSES_BANNER") + "<br>");
         Assert.assertEquals(secondParagraphDressesActual, getPropertyValue("SECOND_PARAGRAPH_DRESSES_BANNER"));
 
 
         String listResultsText = myStoreDressesSteps.getTextListResult();
-        Reporter.log("Actual line: " + listResultsText + "<br>");
-        System.out.println("Actual line: " + listResultsText);
-        Reporter.log("Expected line: " + getPropertyValue("HEADER_COUNTER_DRESSES_TEXT") + "<br>");
-        System.out.println("Expected line: " + getPropertyValue("HEADER_COUNTER_DRESSES_TEXT"));
+        Reporter.log("Actual dresses list result text: " + listResultsText + "<br>");
+        System.out.println("Actual dresses list result text: " + listResultsText);
+        Reporter.log("Expected dresses list result text: " + getPropertyValue("HEADER_COUNTER_DRESSES_TEXT") + "<br>");
+        System.out.println("Expected dresses list result text: " + getPropertyValue("HEADER_COUNTER_DRESSES_TEXT"));
         Assert.assertEquals(listResultsText, getPropertyValue("HEADER_COUNTER_DRESSES_TEXT"));
     }
 
@@ -65,24 +65,30 @@ public class MenuTests extends BaseTest{
     public void testTshirtCategory_SR1012() throws IOException {
         tshirtsSteps.openTshirtsCategory();
         String cartURLActual = tshirtsSteps.getURLActual();
+        Reporter.log("TShirt Actual URL: " + cartURLActual + "<br>");
+        Reporter.log("TShirt Expected URL: " + getPropertyValue("TSHIRT_CATEGORY_URL") + "<br>");
         Assert.assertEquals(cartURLActual, getPropertyValue("TSHIRT_CATEGORY_URL"),
-                "Error: URL actual and expected do not match Tshirts category.");
+                "Error: TShirt URL actual and expected do not match Tshirts category.");
 
 
         boolean result = tshirtsSteps.verifyBannerDisplayed();
-        System.out.println("BannerDisplayed: " + result);
-        Reporter.log("BannerDisplayed: " + result);
+        System.out.println("TShirt Banner is displayed: " + result);
+        Reporter.log("TShirt Banner is displayed: " + result + "<br>");
         Assert.assertTrue(result);
 
 
         String first_P_actual = tshirtsSteps.getParagraphBanner(0);
         String second_P_actual = tshirtsSteps.getParagraphBanner(1);
-
+        Reporter.log("Actual TShirt first paragraph: " + first_P_actual + "<br>");
+        Reporter.log("Expected TShirt first paragraph: " + getPropertyValue("FIRST_PARAGRAPH_BANNER_TSHIRT") + "<br>");
         Assert.assertEquals(first_P_actual, getPropertyValue("FIRST_PARAGRAPH_BANNER_TSHIRT"));
+        Reporter.log("Actual TShirt second paragraph: " + second_P_actual + "<br>");
+        Reporter.log("Expected TShirt second paragraph: " + getPropertyValue("SECOND_PARAGRAPH_BANNER_TSHIRT") + "<br>");
         Assert.assertEquals(second_P_actual, getPropertyValue("SECOND_PARAGRAPH_BANNER_TSHIRT"));
 
-
         String headerCounter = tshirtsSteps.getCounterParagraph();
+        Reporter.log("Actual TShirt counter paragraph: " + headerCounter + "<br>");
+        Reporter.log("Expected TShirt counter paragraph: " + getPropertyValue("HEADER_COUNTER_TEXT_TSHIRTS") + "<br>");
         Assert.assertEquals(headerCounter, getPropertyValue("HEADER_COUNTER_TEXT_TSHIRTS"));
     }
 
@@ -95,30 +101,30 @@ public class MenuTests extends BaseTest{
         womenSteps.openWomenCategory();
         String cartURLActual = womenSteps.getURLActual();
         Assert.assertEquals(cartURLActual, getPropertyValue("WOMEN_CATEGORY_URL"),
-                "Error: URL actual and expected do not match.");
-        Reporter.log("Actual URL: " + cartURLActual + "<br>");
-        Reporter.log("Expected URL: " + getPropertyValue("WOMEN_CATEGORY_URL") + "<br>");
+                "Error: Women URL actual and expected do not match.");
+        Reporter.log("Women Actual URL: " + cartURLActual + "<br>");
+        Reporter.log("Women Expected URL: " + getPropertyValue("WOMEN_CATEGORY_URL") + "<br>");
 
         boolean result = womenSteps.verifyBannerDisplayed();
-        System.out.println("BannerDisplayed: " + result);
-        Reporter.log("BannerDisplayed: " + result+ "<br>");
+        System.out.println("Women Banner is displayed: " + result);
+        Reporter.log("Women Banner is displayed: " + result+ "<br>");
         Assert.assertTrue(result);
 
 
         String second_P_actual = womenSteps.getParagraphBanner(1);
-        Reporter.log("Second paragraph actual: " + second_P_actual + "<br>");
-        Reporter.log("Second paragraph expected: " + getPropertyValue("SECOND_PARAGRAPH_BANNER") + "<br>");
+        Reporter.log("Second paragraph Women actual: " + second_P_actual + "<br>");
+        Reporter.log("Second paragraph Women expected: " + getPropertyValue("SECOND_PARAGRAPH_BANNER") + "<br>");
 
         String third_P_actual = womenSteps.getParagraphBanner(2);
-        Reporter.log("Third paragraph actual: " + third_P_actual + "<br>");
-        Reporter.log("Third paragraph expected: " + getPropertyValue("THIRD_PARAGRAPH_BANNER") + "<br>");
+        Reporter.log("Third paragraph Women actual: " + third_P_actual + "<br>");
+        Reporter.log("Third paragraph Women expected: " + getPropertyValue("THIRD_PARAGRAPH_BANNER") + "<br>");
 
         Assert.assertEquals(second_P_actual, getPropertyValue("SECOND_PARAGRAPH_BANNER"));
         Assert.assertEquals(third_P_actual, getPropertyValue("THIRD_PARAGRAPH_BANNER"));
 
         String headerCounter = womenSteps.getCounterParagraph();
-        Reporter.log("Text counter actual: " + headerCounter + "<br>");
-        Reporter.log("Text counter expected: " + getPropertyValue("HEADER_COUNTER_TEXT"));
+        Reporter.log("Women Text counter actual: " + headerCounter + "<br>");
+        Reporter.log("Women Text counter expected: " + getPropertyValue("HEADER_COUNTER_TEXT"));
         Assert.assertEquals(headerCounter, getPropertyValue("HEADER_COUNTER_TEXT"));
     }
 }
