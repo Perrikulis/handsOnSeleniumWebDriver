@@ -8,6 +8,7 @@
             </run>
         </groups>
         <classes>
+            <class name="MyStoreTshirtsTest"></class>
             <class name="MyStoreWomenTests"></class>
         </classes>
     </test>

@@ -1,5 +1,4 @@
 package Pages;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -7,30 +6,32 @@ import org.openqa.selenium.support.How;
 
 import java.util.List;
 
-public class MyStoreWomenPage extends BasePage {
+public class MyStoreTshirtsPage extends BasePage {
     WebDriver webDriverMyStore;
 
-    public MyStoreWomenPage(WebDriver webDriverMyStore) {
+    public MyStoreTshirtsPage (WebDriver webDriverMyStore) {
         this.webDriverMyStore = webDriverMyStore;
     }
 
-    @FindBy(how = How.CLASS_NAME, using = "content_scene_cat")
+    @FindBy(how = How.CLASS_NAME, using = "content_scene_cat_bg")
     private WebElement banner;
 
     @FindBy(how = How.CSS, using = "div.cat_desc>div.rte>p")
-    private List<WebElement> paragraphs_banner;
+    private List <WebElement> paragraphs_banner;
 
     @FindBy(how = How.CSS, using = ".page-heading.product-listing .heading-counter")
     private WebElement paragraphHeadingCounter;
 
-    @FindBy(how = How.CSS, using = "#block_top_menu ul li a[title='Women']")
-    private WebElement womenCategoryElement;
+    @FindBy(how = How.XPATH, using= "(//a[contains(text(),'T-shirts')])[2]")
+    private WebElement tshirtsCategoryXpath;
 
-    public WebElement getBannerWomenCategory(){
+
+
+    public WebElement getBannerTshirtsCategory(){
         return banner;
     }
 
-    public List<WebElement> getParagraphBannerWomenCategory(){
+    public List<WebElement> getParagraphBannerTshirtsCategory(){
         return paragraphs_banner;
     }
 
@@ -38,7 +39,9 @@ public class MyStoreWomenPage extends BasePage {
         return paragraphHeadingCounter;
     }
 
-    public WebElement getWomenCategoryElement(){
-        return womenCategoryElement;
+    public WebElement getiItemsounter(){
+        return tshirtsCategoryXpath;
     }
+
+
 }
