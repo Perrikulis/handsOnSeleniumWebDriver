@@ -55,6 +55,7 @@ public class BaseTest {
     @BeforeTest
     public void beforeTest() {
         //System.out.println("Before test en Clase BaseTest.java");
+        webDriver.manage().window().maximize();
     }
 
     @AfterTest

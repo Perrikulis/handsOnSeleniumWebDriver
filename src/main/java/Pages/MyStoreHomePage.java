@@ -13,7 +13,6 @@ public class MyStoreHomePage extends BasePage {
     private final String DressesMenuxPathSelector = "(//a[contains(text(),'Dresses')])[5]";
     private final String TshirtsMenuxPathSelector = "(//a[contains(text(),'T-shirts')])[2]";
 
-
     public MyStoreHomePage(WebDriver _webDriverMyStoreHome) {
         this.webDriverMyStoreHome = _webDriverMyStoreHome;
     }

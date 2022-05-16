@@ -4,7 +4,8 @@
     <test verbose="2" preserve-order="true" name="/Users/jcanalesp/Documents/GitHub/handsOnSeleniumWebDriver"> <!--Directorio donde esta guardado el proyecto-->
         <classes>
             <class name="CategoryWomenTests"></class> <!--Nombre de la clase con los test que se ejecutaran en la suite de pruebas-->
-            <!--Aqui podemos agregar las clases de CategoryDressesTests & CategoryTshirtTests-->
+            <class name="CategoryTshirtsTests"></class>
+            <!--Aqui podemos agregar la clase de CategoryDressesTests-->
         </classes>
     </test>
 </suite>

@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -105,6 +105,11 @@
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Final_Project" title="CategoryWomenTests" hash-for-method="testSR1010">testSR1010</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Final_Project" title="CategoryTshirtsTests" hash-for-method="testSR1012">testSR1012</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Final_Project -->
@@ -119,6 +124,23 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Final_Project" class="panel Final_Project">
+          <div class="suite-Final_Project-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">CategoryTshirtsTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSR1012">
+                  </a> <!-- testSR1012 -->
+                  <span class="method-name">testSR1012</span>
+                  <em>
+(Tests para probar la categoria T-shirts del proyecto final)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Final_Project-class-passed -->
           <div class="suite-Final_Project-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -149,6 +171,7 @@
   &lt;test thread-count=&quot;5&quot; verbose=&quot;2&quot; name=&quot;/Users/jcanalesp/Documents/GitHub/handsOnSeleniumWebDriver&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;CategoryWomenTests&quot;/&gt;
+      &lt;class name=&quot;CategoryTshirtsTests&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- /Users/jcanalesp/Documents/GitHub/handsOnSeleniumWebDriver --&gt;
 &lt;/suite&gt; &lt;!-- Final Project --&gt;
@@ -162,7 +185,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">/Users/jcanalesp/Documents/GitHub/handsOnSeleniumWebDriver (1 class)</span>
+                <span class="test-name">/Users/jcanalesp/Documents/GitHub/handsOnSeleniumWebDriver (2 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -188,16 +211,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'testSR1010')
 data.setCell(0, 2, 'CategoryWomenTests')
-data.setCell(0, 3, 6195);
+data.setCell(0, 3, 6849);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'testSR1012')
+data.setCell(1, 2, 'CategoryTshirtsTests')
+data.setCell(1, 3, 5338);
 window.suiteTableData['Final_Project']= { tableData: data, tableDiv: 'times-div-Final_Project'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 6 seconds</span>
+              <span class="suite-total-time">Total running time: 12 seconds</span>
               <div id="times-div-Final_Project">
               </div> <!-- times-div-Final_Project -->
             </div> <!-- times-div -->
@@ -212,9 +239,18 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Final_Project" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">2 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">CategoryTshirtsTests</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">afterTest</span>
+                <br/>
+                <span class="ignored-method-name">beforeTest</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Final_Project" class="panel">
@@ -230,11 +266,21 @@ return data;
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">testSR1010</span>
-                <span class="method-start">42 ms</span>
+                <span class="method-start">28 ms</span>
               </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">CategoryTshirtsTests</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">testSR1012</span>
+                <span class="method-start">6880 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">CategoryWomenTests</div> <!-- chronological-class-name -->
               <div class="configuration-test after">
                 <span class="method-name">afterTest</span>
-                <span class="method-start">6240 ms</span>
+                <span class="method-start">12218 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
