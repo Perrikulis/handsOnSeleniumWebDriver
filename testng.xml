@@ -4,12 +4,11 @@
     <test verbose="2" preserve-order="true" name="C:\Users\heriberto\IdeaProjects\handsOnSeleniumWebDriver">
         <groups>
             <run>
-                <include name="WomenCategoryTest"/>
+                <include name="menuTestGroup"/>
             </run>
         </groups>
         <classes>
-            <class name="MyStoreTshirtsTest"></class>
-            <class name="MyStoreWomenTests"></class>
+            <class name="MenuTests"></class>
         </classes>
     </test>
 </suite>

@@ -4,7 +4,7 @@ import Pages.MyStoreHomePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Reporter;
+
 
 public class MyStoreHomeSteps extends BaseSteps {
 
@@ -30,13 +30,11 @@ public class MyStoreHomeSteps extends BaseSteps {
     }
 
     public boolean dressesMenuItemIsDisplayed(){
-        Reporter.log("Dresses menu is displayed: " + _myStoreHomePage.getDressesMenuElement().isDisplayed() + "<br>");
         return _myStoreHomePage.getDressesMenuElement().isDisplayed();
     }
 
     public void clickOnDressesMenuItem(){
         if (dressesMenuItemIsDisplayed()){
-            Reporter.log("Click on Dresses Menu"+ "<br>");
             _myStoreHomePage.getDressesMenuElement().click();
         }
     }
