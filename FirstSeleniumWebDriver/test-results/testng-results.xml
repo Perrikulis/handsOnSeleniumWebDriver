@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="18" total="19" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Custom suite" duration-ms="7470" started-at="2022-05-16T22:22:45 CDT" finished-at="2022-05-16T22:22:53 CDT">
+    <groups>
+      <group name="womenTest">
+        <method signature="WomenBannerTest.womenBtnCLick()[pri:0, instance:WomenBannerTest@524f3b3a]" name="womenBtnCLick" class="WomenBannerTest"/>
+      </group> <!-- womenTest -->
+    </groups>
+    <test name="FirstSeleniumWebDriver" duration-ms="7470" started-at="2022-05-16T22:22:45 CDT" finished-at="2022-05-16T22:22:53 CDT">
+      <class name="WomenBannerTest">
+        <test-method status="PASS" signature="womenBtnCLick()[pri:0, instance:WomenBannerTest@524f3b3a]" name="womenBtnCLick" duration-ms="6797" started-at="2022-05-16T22:22:46 CDT" description="Test de el contenido del banner del la opción Women" finished-at="2022-05-16T22:22:53 CDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- womenBtnCLick -->
+      </class> <!-- WomenBannerTest -->
+    </test> <!-- FirstSeleniumWebDriver -->
+  </suite> <!-- Custom suite -->
+</testng-results>

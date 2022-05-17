@@ -8,6 +8,11 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import org.testng.annotations.*;
 
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Properties;
+
 public class BaseTest {
     //C://Windows//chromedriver.exe
     //C://Windows//geckodriver.exe
@@ -19,6 +24,28 @@ public class BaseTest {
 
     public WebDriver webDriver = getWebDriver(WebDriverType.CHROME);
     private WebDriverType _webDriverType = WebDriverType.CHROME;
+
+
+    private WebDriver getChromeWebDriver() {
+        System.setProperty("webdriver.chrome.driver", _chromeDriverPath);
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments("--incognito");
+        DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
+        desiredCapabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
+        chromeOptions.merge(desiredCapabilities);
+        return new ChromeDriver(chromeOptions);
+    }
+
+    public String getPropertyValue(String nameOfProperty) throws IOException {
+        Properties demoQAProperties = new Properties();
+        InputStream propertiesFilePath = new FileInputStream("values.properties");
+        demoQAProperties.load(propertiesFilePath);
+        String propertyValue = demoQAProperties.getProperty(nameOfProperty);
+        propertiesFilePath.close();
+        return propertyValue;
+    }
+
+
 
     //fin variables globales
     public WebDriver getWebDriver(WebDriverType webDriverType) {
@@ -60,11 +87,11 @@ public class BaseTest {
 
     }
 
-    @AfterTest
+  /*  @AfterTest
     public void afterTest() {
         System.out.println("afterTest test en Clase BaseTes.java");
         webDriver.quit();
 
-    }
+    }*/
 
 }
