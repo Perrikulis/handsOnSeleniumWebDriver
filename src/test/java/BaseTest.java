@@ -13,6 +13,7 @@ import java.util.concurrent.TimeUnit;
 public class BaseTest {
 
     //Comienzo: Declarando variables Globales
+
     private String _chromeDriverPath = "C:\\Users\\Betzabe\\Documents\\CursoSelenium\\Chrome101\\chromedriver_win32\\chromedriver.exe";
     private String _fireFoxDriverPath = "/Users/jxr20920/Downloads/geckodriver";
     private String _operaDriverPath = "/Users/jxr20920/Downloads/operaDriver";
@@ -58,6 +59,7 @@ public class BaseTest {
     public void beforeTest() {
         //System.out.println("Before test en Clase BaseTest.java");
         webDriver.manage().window().maximize();
+
         webDriver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
     }
 

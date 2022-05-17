@@ -7,8 +7,8 @@ import org.testng.Assert;
 public class CategoryWomenTests extends BaseTest{
     CategoryWomenSteps _categoryWomenSteps = new CategoryWomenSteps(webDriver);
 
-    @Test
-    public void SR1010(){
+    @Test(description = "Tests para probar la categoria WOMEN del proyecto final")
+    public void testSR1010(){
         //Step 1: Abrir My Store
         _categoryWomenSteps.openMyStore();
         //Step 2: Click in Women Menu
