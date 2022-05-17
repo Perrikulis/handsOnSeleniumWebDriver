@@ -14,6 +14,7 @@ public class BaseSteps {
     public void openMyStore() {
         System.out.println("openMyStore metodo en BaseSteps.java");
         _webDriver.get(urlMyStore);
+        _webDriver.manage().window().maximize();
         System.out.println("El navegador ha abierto la URL: " + urlMyStore);
     }
 }
