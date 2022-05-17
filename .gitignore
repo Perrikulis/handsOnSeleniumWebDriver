@@ -47,3 +47,5 @@ firstSeleniumWebDriver.iml
 .idea/libraries/Maven__com_google_guava_guava_25_0_jre.xml
 .idea/compiler.xml
 .idea/compiler.xml
+.idea/libraries/Maven__com_beust_jcommander_1_78.xml
+.idea/handsOnSeleniumWebDriver.iml
