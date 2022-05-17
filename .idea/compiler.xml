@@ -9,5 +9,8 @@
         <module name="firstSeleniumWebDriver" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="firstSeleniumWebDriver" target="8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
