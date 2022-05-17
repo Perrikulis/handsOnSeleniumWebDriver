@@ -1,0 +1,62 @@
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+ID: SR1010
+
+REQUERIMIENTO: When opening application URL http://automationpractice.com/index.php
+               Clicking in Women category must take user to
+               http://automationpractice.com/index.php?id_category=3&controller=category and display
+               Women banner and text:
+               ● This category includes all the basics of your wardrobe and much more:
+               ● shoes, accessories, printed t-shirts, feminine dresses, women's jeans!
+               ● 7 products as search result total banner
+
+PRECONDICIÓN:  ● La página está disponible
+               ● Usuario tiene acceso a la página http://automationpractice.com/index.php?id_category=3&controller=category
+
+PASOS:         1. Ingresar a la página http://automationpractice.com/index.php
+               2. Validar la URL actual.
+               3. Validar textos del banner Women.
+
+ESTADO:        APROBADO.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+ID: SR1011
+
+REQUERIMIENTO: When opening application URL http://automationpractice.com/index.php
+               Clicking in Dresses category must take user to
+               http://automationpractice.com/index.php?id_category=8&controller=category and display
+               Dresses banner and text:
+               ● Find your favorites dresses from our wide choice of evening, casual or summer dresses!
+               ● We offer dresses for every day, every style and every occasion.
+               ● 5 products as search result total banner
+
+PRECONDICIÓN:  ● La página está disponible
+               ● Usuario tiene acceso a la página http://automationpractice.com/index.php?id_category=8&controller=category
+
+PASOS:         1. Ingresar a la página http://automationpractice.com/index.php
+               2. Validar la URL actual.
+               3. Validar textos del banner Dresses.
+
+ESTADO:        APROBADO.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+ID: SR1011
+
+REQUERIMIENTO: When opening application URL http://automationpractice.com/index.php
+               Clicking in T-Shirts category must take user to
+               http://automationpractice.com/index.php?id_category=3&controller=category and display
+               T-Shirts banner and text:
+               ● The must have of your wardrobe, take a look at our different colors,
+               ● shapes and style of our collection!
+               ● There is 1 product.
+
+PRECONDICIÓN:  ● La página está disponible
+               ● Usuario tiene acceso a la página http://automationpractice.com/index.php?id_category=3&controller=category
+
+PASOS:         1. Ingresar a la página http://automationpractice.com/index.php
+               2. Validar la URL actual.
+               3. Validar textos del banner T-Shirts.
+
+ESTADO:        APROBADO.
