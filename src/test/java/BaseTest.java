@@ -87,11 +87,11 @@ public class BaseTest {
 
     }
 
-  /*  @AfterTest
+    @AfterTest
     public void afterTest() {
         System.out.println("afterTest test en Clase BaseTes.java");
         webDriver.quit();
 
-    }*/
+    }
 
 }

@@ -1,20 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="Element Tests">
+<suite name="WomenBanner Tests">
     <test verbose="2" preserve-order="true"
-          name="C:/Users/mario/Desktop/desk_23-10-2021/SeleniumCurso03-2022/handsOnSeleniumWebDriver/FirstSeleniumWebDriver">
+          name="C:/Users/mario/Desktop/desk_23-10-2021/SeleniumCurso03-2022/handsOnSeleniumWebDriver">
         <groups>
             <run>
                 <include name="womenTest"/>
-                <include name="dressesTest"/>
-                <include name="tShirtsTest"/>
             </run>
         </groups>
-        <classes>
-            <class name="WomenBannerTest"/>
-            <class name="DressesBannerTest"/>
-            <class name="TShirtsBannerTest"/>
-        </classes>
     </test>
 </suite>
