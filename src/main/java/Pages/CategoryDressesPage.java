@@ -10,10 +10,6 @@ import org.openqa.selenium.support.How;
 public class CategoryDressesPage extends BasePage {
     WebDriver _webDriverDresses;
 
-    /*    final String bannerDressesxPathLocator = "//div[@class='content_scene_cat']";
-    final String textDressesxPathLocator = "//div[@class='cat_desc']/div[@class='rte']//p[1]";
-    final String text2DressesxPathLocator = "//div[@class='cat_desc']/div[@class='rte']//p[2]";
-    final String resultsDressesxPathLocator = "//h1/span[2]";*/
 
     @FindBy(how = How.XPATH, using = "//div[@class='content_scene_cat']")
     private WebElement bannerDresses;

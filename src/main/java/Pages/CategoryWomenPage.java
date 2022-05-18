@@ -9,10 +9,7 @@ import org.openqa.selenium.support.How;
 
 public class CategoryWomenPage extends BasePage {
     WebDriver _webDriverWomen;
-    /*final String bannerWomenCSSLocator = "#center_column > div.content_scene_cat > div";
-    final String textWomenCSSLocator = "#center_column > div.content_scene_cat > div > div > div > p:nth-child(2)";
-    final String text2WomenCSSLocator = "#center_column > div.content_scene_cat > div > div > div > p:nth-child(3)";
-    final String resultsWomenCSSLocator = "#center_column > h1 > span.heading-counter";*/
+
 
     @FindBy(how = How.CSS, using = "#center_column > div.content_scene_cat > div")
     private WebElement bannerWomen;
