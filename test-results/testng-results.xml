@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Final Project" duration-ms="11570" started-at="2022-05-15T23:17:27 CDT" finished-at="2022-05-15T23:17:39 CDT">
+    <groups>
+    </groups>
+    <test name="/Users/jcanalesp/Documents/GitHub/handsOnSeleniumWebDriver" duration-ms="11570" started-at="2022-05-15T23:17:27 CDT" finished-at="2022-05-15T23:17:39 CDT">
+      <class name="MenuTests">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:MenuTests@1de76cc7]" name="beforeTest" is-config="true" duration-ms="173" started-at="2022-05-15T23:17:27 CDT" finished-at="2022-05-15T23:17:27 CDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="testSR1010()[pri:0, instance:MenuTests@1de76cc7]" name="testSR1010" duration-ms="8952" started-at="2022-05-15T23:17:27 CDT" description="Tests para probar la categoria WOMEN del proyecto final" finished-at="2022-05-15T23:17:36 CDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSR1010 -->
+        <test-method status="PASS" signature="testSR1012()[pri:0, instance:MenuTests@1de76cc7]" name="testSR1012" duration-ms="2243" started-at="2022-05-15T23:17:36 CDT" description="Tests para probar la categoria T-shirts del proyecto final" finished-at="2022-05-15T23:17:38 CDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSR1012 -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:MenuTests@1de76cc7]" name="afterTest" is-config="true" duration-ms="176" started-at="2022-05-15T23:17:38 CDT" finished-at="2022-05-15T23:17:39 CDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- MenuTests -->
+    </test> <!-- /Users/jcanalesp/Documents/GitHub/handsOnSeleniumWebDriver -->
+  </suite> <!-- Final Project -->
+</testng-results>
