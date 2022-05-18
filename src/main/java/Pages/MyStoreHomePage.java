@@ -9,6 +9,11 @@ import java.util.List;
 public class MyStoreHomePage extends BasePage {
     WebDriver webDriverMyStoreHome;
     private final String menuListClassSelector = "ul.sf-menu>li>a";
+    private final String WomenMenuCSSelector = "#block_top_menu > ul > li:nth-child(1) > a";
+
+    private final String DressesMenuxPathSelector = "(//a[contains(text(),'Dresses')])[5]";
+    private final String TshirtsMenuxPathSelector = "(//a[contains(text(),'T-shirts')])[2]";
+
 
     public MyStoreHomePage(WebDriver _webDriverMyStoreHome) {
         this.webDriverMyStoreHome = _webDriverMyStoreHome;
@@ -18,6 +23,22 @@ public class MyStoreHomePage extends BasePage {
     public List<WebElement> getMenuList() {
         List<WebElement> listaMenu = webDriverMyStoreHome.findElements(By.cssSelector(menuListClassSelector));
         return listaMenu;
+    }
+    //Este metodo se manda llamar desdee CategoryWomenSteps
+    public WebElement getWomenMenu()
+    {
+        WebElement womenMenu = webDriverMyStoreHome.findElement(By.cssSelector(WomenMenuCSSelector));
+        return womenMenu;
+    }
+
+    public WebElement getDressesMenu(){
+        WebElement dressesMenu = webDriverMyStoreHome.findElement(By.xpath(DressesMenuxPathSelector));
+        return dressesMenu;
+    }
+
+    public WebElement getTshirtsMenu(){
+        WebElement tshirtsMenu = webDriverMyStoreHome.findElement(By.xpath(TshirtsMenuxPathSelector));
+        return tshirtsMenu;
     }
 
     //Este metodo se manda a llamar desde MyStoreHomeSteps
@@ -34,5 +55,6 @@ public class MyStoreHomePage extends BasePage {
         }
         return itemToReturn;
     }
+
 
 }

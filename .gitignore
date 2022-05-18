@@ -2,3 +2,50 @@
 .idea/vcs.xml
 /target/*
 .idea/uiDesigner.xml
+.idea/misc.xml
+src/test/java/BaseTest.java
+test-results/Elements Tests/C__Users_heriberto_IdeaProjects_handsOnSeleniumWebDriver.html
+test-results/Elements Tests/C__Users_heriberto_IdeaProjects_handsOnSeleniumWebDriver.xml
+test-results/old/Elements Tests/C__Users_heriberto_IdeaProjects_handsOnSeleniumWebDriver.properties
+test-results/old/Elements Tests/classes.html
+test-results/old/Elements Tests/groups.html
+test-results/old/Elements Tests/index.html
+test-results/old/Elements Tests/main.html
+test-results/old/Elements Tests/methods-alphabetical.html
+test-results/old/Elements Tests/methods-not-run.html
+test-results/old/Elements Tests/methods.html
+test-results/old/Elements Tests/reporter-output.html
+test-results/old/Elements Tests/testng.xml.html
+test-results/old/Elements Tests/toc.html
+.idea/compiler.xml
+.idea/modules.xml
+firstSeleniumWebDriver.iml
+.idea/compiler.xml
+.idea/compiler.xml
+.idea/libraries/Maven__com_google_code_findbugs_jsr305_3_0_1.xml
+.idea/libraries/Maven__com_google_errorprone_error_prone_annotations_2_1_3.xml
+.idea/libraries/Maven__org_webjars_jquery_3_5_1.xml
+.idea/libraries/Maven__org_testng_testng_7_5.xml
+.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_32.xml
+.idea/libraries/Maven__org_seleniumhq_selenium_selenium_support_3_141_59.xml
+.idea/libraries/Maven__org_seleniumhq_selenium_selenium_safari_driver_3_141_59.xml
+.idea/libraries/Maven__org_seleniumhq_selenium_selenium_remote_driver_3_141_59.xml
+.idea/libraries/Maven__org_seleniumhq_selenium_selenium_opera_driver_3_141_59.xml
+.idea/libraries/Maven__org_seleniumhq_selenium_selenium_java_3_141_59.xml
+.idea/libraries/Maven__org_seleniumhq_selenium_selenium_ie_driver_3_141_59.xml
+.idea/libraries/Maven__org_seleniumhq_selenium_selenium_firefox_driver_3_141_59.xml
+.idea/libraries/Maven__org_seleniumhq_selenium_selenium_edge_driver_3_141_59.xml
+.idea/libraries/Maven__org_seleniumhq_selenium_selenium_chrome_driver_3_141_59.xml
+.idea/libraries/Maven__org_seleniumhq_selenium_selenium_api_3_141_59.xml
+.idea/libraries/Maven__org_codehaus_mojo_animal_sniffer_annotations_1_14.xml
+.idea/libraries/Maven__org_checkerframework_checker_compat_qual_2_0_0.xml
+.idea/libraries/Maven__org_apache_commons_commons_exec_1_3.xml
+.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_8_15.xml
+.idea/libraries/Maven__com_squareup_okio_okio_1_14_0.xml
+.idea/libraries/Maven__com_squareup_okhttp3_okhttp_3_11_0.xml
+.idea/libraries/Maven__com_google_j2objc_j2objc_annotations_1_1.xml
+.idea/libraries/Maven__com_google_guava_guava_25_0_jre.xml
+.idea/compiler.xml
+.idea/compiler.xml
+.idea/libraries/Maven__com_beust_jcommander_1_78.xml
+.idea/handsOnSeleniumWebDriver.iml
