@@ -5,10 +5,12 @@ import Pages.SearchResultsPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import Pages.MyStoreHomePage;
+import org.openqa.selenium.support.PageFactory;
 
 public class CategoryWomenSteps extends BaseSteps {
     MyStoreHomePage _myStoreHomePage = new MyStoreHomePage(_webDriver);
-    CategoryWomenPage _categoryWomenPage = new CategoryWomenPage(_webDriver);
+    //CategoryWomenPage _categoryWomenPage = new CategoryWomenPage(_webDriver);
+    CategoryWomenPage _categoryWomenPage = PageFactory.initElements(_webDriver, CategoryWomenPage.class);
 
     public CategoryWomenSteps(WebDriver _webDriver) {
         super(_webDriver);

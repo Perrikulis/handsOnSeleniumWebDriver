@@ -4,10 +4,12 @@ import Pages.CategoryTshirtsPage;
 import Pages.MyStoreHomePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.PageFactory;
 
 public class CategoryTshirtsSteps extends BaseSteps{
     MyStoreHomePage _myStoreHomePage = new MyStoreHomePage(_webDriver);
-    CategoryTshirtsPage _categoryTshirtsPage = new CategoryTshirtsPage(_webDriver);
+    //CategoryTshirtsPage _categoryTshirtsPage = new CategoryTshirtsPage(_webDriver);
+    CategoryTshirtsPage _categoryTshirtsPage = PageFactory.initElements(_webDriver, CategoryTshirtsPage.class);
 
     public CategoryTshirtsSteps(WebDriver webDriver) {
         super(webDriver);

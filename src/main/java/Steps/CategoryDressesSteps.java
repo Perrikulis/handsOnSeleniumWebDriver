@@ -4,10 +4,12 @@ import Pages.CategoryDressesPage;
 import Pages.MyStoreHomePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.PageFactory;
 
 public class CategoryDressesSteps extends BaseSteps{
     MyStoreHomePage _myStoreHomePage = new MyStoreHomePage(_webDriver);
-    CategoryDressesPage _categoryDressesPage = new CategoryDressesPage(_webDriver);
+    //CategoryDressesPage _categoryDressesPage = new CategoryDressesPage(_webDriver);
+    CategoryDressesPage _categoryDressesPage = PageFactory.initElements(_webDriver, CategoryDressesPage.class);
 
     public CategoryDressesSteps(WebDriver _webDriver) {
         super(_webDriver);
