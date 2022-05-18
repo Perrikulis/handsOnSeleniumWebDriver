@@ -2,3 +2,5 @@
 .idea/vcs.xml
 /target/*
 .idea/uiDesigner.xml
+test-results/*
+.idea/*

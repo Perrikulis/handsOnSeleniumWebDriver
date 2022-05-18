@@ -1,4 +1,3 @@
-import Pages.SearchResultsPage;
 import Steps.MyStoreHomeSteps;
 import Steps.SearchResultsSteps;
 import org.openqa.selenium.By;
