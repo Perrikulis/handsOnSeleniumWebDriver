@@ -49,3 +49,16 @@ firstSeleniumWebDriver.iml
 .idea/compiler.xml
 .idea/libraries/Maven__com_beust_jcommander_1_78.xml
 .idea/handsOnSeleniumWebDriver.iml
+src/test/java/BaseTest.java
+src/test/java/MenuTests.java
+test-results/emailable-report.html
+test-results/Final Project/_Users_jcanalesp_Documents_GitHub_handsOnSeleniumWebDriver.html
+test-results/Final Project/_Users_jcanalesp_Documents_GitHub_handsOnSeleniumWebDriver.xml
+test-results/index.html
+test-results/junitreports/TEST-MenuTests.xml
+test-results/old/Final Project/classes.html
+test-results/old/Final Project/methods-alphabetical.html
+test-results/old/Final Project/methods.html
+test-results/old/Final Project/toc.html
+test-results/old/index.html
+test-results/testng-results.xml
