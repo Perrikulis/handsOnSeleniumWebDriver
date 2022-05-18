@@ -18,7 +18,7 @@ import java.util.concurrent.TimeUnit;
 public class BaseTest {
 
     //Comienzo: Declarando variables Globales
-    private String _chromeDriverPath = "C:\\SELENIUM\\101\\chromedriver.exe";
+    private String _chromeDriverPath = "C:\\Users\\cynth\\Documents\\WebDriver\\chromedriver.exe";
     private String _fireFoxDriverPath = "/Users/jxr20920/Downloads/geckodriver";
     private String _operaDriverPath = "/Users/jxr20920/Downloads/operaDriver";
     //En Windows el path debe empezar con C: y terminar el chromedriver.exe

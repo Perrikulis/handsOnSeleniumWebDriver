@@ -12,6 +12,7 @@ import java.io.IOException;
 public class MenuTests extends BaseTest{
 
 
+
     MyStoreDressesSteps myStoreDressesSteps = new MyStoreDressesSteps(webDriver);
     MyStoreHomeSteps myStoreHomeSteps = new MyStoreHomeSteps(webDriver);
     MyStoreTshirtsSteps tshirtsSteps = new MyStoreTshirtsSteps(webDriver);
