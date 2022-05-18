@@ -1,9 +1,7 @@
 import Steps.SearchResultsSteps;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import sun.util.resources.cldr.sv.CalendarData_sv_SE;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?> <!--Lineas por default-->
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd"> <!--Lineas por default-->
+<suite name="Final Project"> <!--Nombre de la suite de pruebas-->
+    <test verbose="2" preserve-order="true" name="/Users/jcanalesp/Documents/GitHub/handsOnSeleniumWebDriver"> <!--Directorio donde esta guardado el proyecto-->
+        <classes>
+            <class name="MenuTests"></class> <!--Esta clase contiene los test del SR1010 & SR1012-->
+        </classes>
+    </test>
+</suite>
